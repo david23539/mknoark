@@ -1,0 +1,76 @@
+
+@import "../../assets/base/colors";
+@import "../../assets/base/variables";
+
+.cnt-table {
+  .cnt-scroll-table {
+    overflow: auto;
+    width: 100%;
+
+    > table {
+      border-spacing: 0;
+      font-size: 15px;
+      table-layout: fixed;
+
+      > thead {
+        color: $gray-color-asces;
+        text-transform: capitalize;
+
+        > th {
+          height: 2.5rem;
+          min-width: 20%;
+
+          &:first-child {
+            padding-left: 5rem;
+            width: 5%;
+          }
+        }
+      }
+
+      > tbody {
+        text-align: center;
+        font-size: 15px;
+
+        > tr {
+          &:nth-child(odd) {
+            background: $primary-table;
+          }
+
+          &:hover {
+            background: $primary-table-hover;
+            cursor: pointer;
+            transition: all .25s;
+          }
+
+          .index {
+            font-weight: 600;
+          }
+
+          > td {
+            min-width: 20%;
+            overflow: hidden;
+            padding: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:first-child {
+              border-right: 1px solid $blue-200;
+              width: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cnt-legend {
+    margin: 1rem 1rem 1rem 0;
+    overflow: auto;
+    width: 100%;
+
+    .legend {
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+  }
+}

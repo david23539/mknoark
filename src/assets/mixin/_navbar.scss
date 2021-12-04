@@ -1,0 +1,8 @@
+
+@import "shadows";
+
+@mixin navbar-colors($color, $link-color) {
+  color: $link-color;
+  background-color: $color !important;
+  @include shadow-navbar-color($color);
+}

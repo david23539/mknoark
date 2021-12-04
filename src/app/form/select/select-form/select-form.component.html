@@ -1,0 +1,33 @@
+<div #select>
+  <input type="text"
+         readonly
+         #inputTextForm
+         [id]="dinamicId"
+         (click)="checkPositionList()"
+         (blur)="validated()"
+         [(ngModel)]="value"
+         [ngClass]="{invalid: (invalid | async)}"
+  />
+
+  <label
+      #textLabel
+      [for]="dinamicId"
+      [ngClass]="value ? 'active': ''"
+      (click)="focusInput(); showList = true">
+    {{labelText}}
+  </label>
+
+  <nk-list *ngIf="showList"
+           [data]="data"
+           [animated]="true"
+           [reverseList]="reverseList"
+           (click)="showList = false"
+           (mouseOver)="mouseIn($event)"
+           (selectItem)="selectItem($event)">
+  </nk-list>
+  <nk-validation-message
+    *ngIf="invalid | async"
+    [messages]="failures | async">
+  </nk-validation-message>
+
+</div>

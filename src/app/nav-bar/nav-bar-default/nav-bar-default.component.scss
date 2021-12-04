@@ -1,0 +1,80 @@
+
+@import "../navbar";
+
+.version {
+  @include centerElement;
+  > span {
+    font-size: .6rem;
+  }
+}
+.icon-menu {
+  padding-left: 1rem;
+
+  .icon {
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 2.5rem;
+    cursor: pointer;
+    .hamburger {
+      width: 20px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        transition: .25s;
+      }
+
+      &:before{
+        top: -6px;
+      }
+
+      &:after {
+        top: 6px;
+      }
+    }
+  }
+
+  .deploy {
+    background: transparent !important;
+    box-shadow: none !important;
+    &:before {
+      top: 0 !important;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0 !important;
+      transform: rotate(135deg);
+    }
+  }
+
+  .undeploy {
+    transform: rotate(-0deg);
+  }
+}
+.cnt-title {
+  flex: 1;
+  min-width: 0;
+  padding-right: 60px;
+  @include centerElement;
+  .title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

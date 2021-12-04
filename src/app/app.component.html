@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="container__row">
+    <div class="container__col-12">
+      <nk-card-default>
+        <h1 header>
+          ESTO ES EL TITULO
+        </h1>
+        <div body>
+          <nk-form-default>
+            <div class="container__row">
+              <div class="container__col-6">
+                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'" [name]="'campo1'"></nk-input-form>
+              </div>
+
+              <div class="container__col-6">
+                <nk-input-form required [(ngModel)]="data.campo2" [label]="'campo 1'" [name]="'campo2'"></nk-input-form>
+
+              </div>
+            </div>
+
+            <div class="container__row">
+              <div class="container__col-6">
+                <nk-input-form required [(ngModel)]="data.campo3" [label]="'campo 1'" [name]="'campo3'"></nk-input-form>
+
+              </div>
+
+              <div class="container__col-6">
+                <nk-input-form required [(ngModel)]="data.campo4" [label]="'campo 1'" [name]="'campo4'"></nk-input-form>
+
+              </div>
+            </div>
+          </nk-form-default>
+        </div>
+      </nk-card-default>
+    </div>
+  </div>
+</div>

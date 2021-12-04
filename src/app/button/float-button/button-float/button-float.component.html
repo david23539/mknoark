@@ -1,0 +1,5 @@
+<div class="cnt-float-button" (click)="clicked = !clicked">
+  <button #button (click)="clickedButton()" [ngClass]="{active: clicked, 'custom-bg': colorBg}" [style]="{background: colorBg}">
+    <i [class]="icon"></i>
+  </button>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <input
+    [(ngModel)]="value"
+    (blur)="validated()"
+    [attr.type]="type"
+    [id]="idRandom"
+    [readOnly]="readonly"
+    #inputText
+  />
+
+  <label *ngIf="label"
+         (click)="focusInput()"
+         [for]="idRandom"
+         #textLabel
+  >
+    {{label}}
+  </label>
+</div>

@@ -1,0 +1,16 @@
+<form #form="ngForm"
+      (ngSubmit)="sendData(form.value)"
+      autocomplete="off"
+      novalidate
+>
+  <ng-content></ng-content>
+  <div class="container__col-12">
+    <nk-button-default
+      [isLoading]="isLoading"
+      [typeButton]="form.valid  ? 'success': 'disabled'"
+    >
+      {{textButton ? textButton : 'Enviar'}}
+    </nk-button-default>
+  </div>
+</form>
+

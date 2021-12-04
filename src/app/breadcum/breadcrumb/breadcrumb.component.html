@@ -1,0 +1,20 @@
+<div class="cnt-breadcrumb">
+  <div class="bar-inactive"></div>
+  <div #barActive class="bar-active"></div>
+  <div class="breadcrumb">
+    <div class="step-line" #steps
+         *ngFor="let item of stepsList; let index = index"
+         [ngClass]="stepActive === index
+          ? 'active'
+          : stepActive > index
+          ? 'subActive'
+          : blockSteps
+          ? 'inactive': ''"
+    >
+      <div class="cnt-step">
+        <span class="step-number" (click)="setSelectedActive(index)">{{index + 1}}</span>
+        <span class="step-title hidden-sm-down">{{item}}</span>
+      </div>
+    </div>
+  </div>
+</div>

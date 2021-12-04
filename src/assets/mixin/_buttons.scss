@@ -1,0 +1,49 @@
+@mixin base_button_style () {
+  margin-top: .5rem;
+  width: 100%;
+  border: none;
+  position: relative;
+  padding: .5rem;
+  background: $primary;
+  color: $white;
+  cursor: pointer;
+  @include shadow-button-color($primary);
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+
+  &:hover {
+    @include shadow-button-color($primary, true);
+  }
+
+  &:active {
+    opacity: .8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: "";
+    background: $secondary;
+    position: absolute;
+    height: 50px;
+    left: 50%;
+    top: 20%;
+    opacity: 0;
+    transform: scale(6);
+    width: 50px;
+    border-radius: 50%;
+    transition: all .8s
+  }
+
+  &:active:after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+
+  }
+}

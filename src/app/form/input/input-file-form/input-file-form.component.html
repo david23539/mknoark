@@ -1,0 +1,36 @@
+<div class="cnt-input-file">
+  <input
+    type="file"
+    [accept]="accept"
+    (change)="getNameFile($event)"
+    [id]="dinamicId"
+    [multiple]="multiple"
+
+  />
+
+  <input
+    [(ngModel)]="value"
+    hidden
+  />
+
+  <label
+         [for]="dinamicId"
+         [ngClass]="
+          {
+          'valid': (value),
+           invalid: (invalid | async)
+           }
+
+         "
+         #textLabel
+  >
+    {{label}}
+    <i class="icon-nk-file-upload"></i>
+  </label>
+
+  <nk-validation-message
+    *ngIf="invalid | async"
+    [messages]="failures | async"
+  >
+  </nk-validation-message>
+</div>

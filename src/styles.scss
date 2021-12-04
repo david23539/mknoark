@@ -1,0 +1,79 @@
+@import "assets/base/grid";
+@import "./assets/base/icons";
+@import "./assets/base/spinner";
+@import "./assets/base/toast";
+@import "./assets/base/cookie";
+@import "./assets/base/tooltip";
+@import "./assets/base/badge";
+
+@font-face {
+  font-family: 'google-fonts';
+  src: url('assets/fonts/Open_Sanzs/OpenSans-Light.ttf');
+
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $grey-700;
+  font-size: 16px;
+  font-family: 'google-font', sans-serif;
+  -webkit-overflow-scrolling: touch;
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 18.5px;
+  }
+}
+
+.separation {
+  margin-bottom: 1rem;
+}
+
+.text-rigth {
+  text-align: right !important;
+}
+
+.align-item-center {
+  display: flex;
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.logo {
+  background-image: url("assets/images/noark-suite-rc.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: contain;
+  height: 10vh;
+  margin: 10% auto;
+  max-width: 38%;
+  width: 100%;
+
+  @media (max-width: $mobile-medium)
+  and (orientation: landscape) {
+    display: none;
+  }
+
+  @media (max-height: 500px) {
+    display: none;
+  }
+}
+
+:root {
+  --primary-color: #{$blue-900};
+  --secundary-color: #{$blue-500};
+  --thirty-color: #{$blue-200};
+  --color-table-primary: #{$blue-100};
+  --color-table-primary-hover: #{$blue-200}
+}
+

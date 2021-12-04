@@ -1,0 +1,104 @@
+@import "../button";
+
+
+button {
+  @include base_button_style();
+}
+
+.float {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  color: $white;
+}
+
+.info {
+  background: $blue-900;
+  @include shadow-button-color($blue-900);
+
+  &:hover {
+    @include shadow-button-color($blue-900, true);
+  }
+
+  &:after {
+    background: $blue-400;
+  }
+}
+
+.success {
+  background: $green-500;
+  @include shadow-button-color($green-500);
+
+  &:hover {
+    @include shadow-button-color($green-500, true);
+  }
+
+  &:after {
+    background: $green-200;
+  }
+}
+
+.warning {
+  background: $yellow-700;
+  @include shadow-button-color($yellow-700);
+
+  &:hover {
+    @include shadow-button-color($yellow-700, true);
+  }
+
+  &:after {
+    background: $yellow-500;
+  }
+}
+
+.danger {
+  background: $red-700;
+  @include shadow-button-color($red-700);
+
+  &:hover {
+    @include shadow-button-color($red-700, true);
+  }
+
+  &:after {
+    background: $red-500;
+  }
+}
+
+.default {
+  background: $white;
+  color: $primary;
+  &:after {
+    background: $grey-a400;
+  }
+}
+
+.disabled {
+  background: $grey-a400;
+  pointer-events: none;
+  @include shadow-button-color($white);
+
+  &:hover {
+    @include shadow-button-color($white);
+  }
+
+  &:after {
+    background: $grey-400;
+  }
+}
+
+.no-shadow {
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.isLoading {
+  opacity: 0.7;
+  pointer-events: none;
+}

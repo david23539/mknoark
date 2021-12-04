@@ -1,0 +1,73 @@
+@import "../../../assets/base/colors";
+.cnt-msg-chat {
+  width: 100%;
+  position: relative;
+  .wrapper-msg {
+    width: fit-content;
+    background: $primary;
+    padding: .5rem 2rem .5rem .5rem;
+    color: white;
+    position: relative;
+    border-radius: 10px 0 10px 10px;
+    .status {
+      position: absolute;
+      height: .5rem;
+      width: .5rem;
+      border-radius: 50%;
+      top: -.5rem;
+      right: -.5rem;
+      &.read {
+        background: $light-green-a400;
+      }
+      &.received {
+        background: $amber-a700;
+      }
+    }
+    .text {
+      font-size: 14px;
+    }
+    .options {
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      font-size: 1rem;
+      top: .5rem;
+      width: 1rem;
+    }
+
+  }
+
+  .wrapper-sub-menu {
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+  }
+
+  .wrapper-time {
+    display: flex;
+    justify-content: space-between;
+    span {
+      &:last-child {
+        opacity: 0;
+      }
+    }
+  }
+  &.enter {
+    .wrapper-msg {
+      padding: .5rem .5rem .5rem 2rem;
+      background: $secondary;
+      border-radius: 0 10px 10px 10px;
+      .options {
+        left: .5rem;
+      }
+    }
+    .wrapper-time {
+      flex-direction: row-reverse;
+      span {
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

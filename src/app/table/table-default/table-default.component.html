@@ -1,0 +1,30 @@
+
+<div class="cnt-table">
+  <div class="cnt-scroll-table">
+    <table>
+      <thead>
+        <th></th>
+        <th *ngFor="let item of headTitles">
+          <span>{{item}}</span>
+        </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of bodyTable; let i = index">
+        <td class="index">{{i + 1}}</td>
+        <td
+          #colorColumn
+          *ngFor="let property of propertyContent; let e = index"
+          [style.color]="getColorColumn(e)"
+        >
+          <span>{{item[property]}}</span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="legend"
+       class="cnt-legend"
+  >
+    <span class="legend" *ngFor="let itemLegend of legend" [style.color]="itemLegend.color"> {{itemLegend.value}}</span>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="cnt-card" >
+  <div class="card"
+       [ngClass]="scroll ? 'card-scroll': ''"
+       [ngStyle]="{'min-height': height ? height + 'vh': '80vh'}"
+  >
+
+    <div class="style-header" [ngClass]="{'ios': isIos}">
+      <ng-content select="[header]"></ng-content>
+    </div>
+
+
+    <div class="style-body">
+      <ng-content select="[body]"></ng-content>
+    </div>
+
+
+    <div class="style-footer" *ngIf="footer">
+      <ng-content select="[footer]"></ng-content>
+    </div>
+  </div>
+</div>

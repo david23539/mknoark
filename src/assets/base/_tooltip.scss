@@ -1,0 +1,14 @@
+@import "colors";
+
+.cnt-tooltip {
+  position: absolute !important;
+  background: $gray-color-asces !important;
+  z-index: 1;
+  color: $white;
+  padding: 5px !important;
+  margin: 0 !important;
+  left: 50%;
+  bottom: -2rem;
+  transform: translateX(-50%);
+  font-size: 10px;
+}

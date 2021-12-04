@@ -1,0 +1,67 @@
+@import "../list";
+
+.cnt-list {
+  background: $white;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  @include shadow-list-color();
+
+  .custom-style-list {
+    max-height: 120px;
+    overflow-y: auto;
+  }
+  .style-list{
+    background: $white;
+    list-style: none;
+    padding: 5px;
+    margin: 0 0 15px ;
+    text-align: center;
+    >li{
+      padding: 10px;
+      font-size: 13px;
+      &:hover{
+        background: $primary;
+        color: $white;
+        cursor: pointer;
+        border-bottom: none;
+        padding: 15px 10px 5px;
+        @include shadow-list-color($primary);
+        >span{
+          position: relative;
+          top: -6px;
+        }
+        >hr{
+          display: block;
+          margin: 5px auto 1px;
+          animation-name: underline;
+          animation-duration: .5s;
+          pointer-events: none;
+        }
+        .collapse{
+          display: inline;
+        }
+      }
+      .collapse{
+        display: none;
+      }
+      >i{
+        margin-right: 10px;
+      }
+      >hr{
+        display: none;
+        margin: 0;
+      }
+
+    }
+    .animated:hover{
+      transition: all .5s;
+    }
+  }
+
+}
+
+.reverseList {
+  bottom: 100%;
+}

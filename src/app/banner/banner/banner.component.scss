@@ -1,0 +1,10 @@
+.cnt-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  i, span {
+    display: block;
+    margin: 1rem;
+  }
+}

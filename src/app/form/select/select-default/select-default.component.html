@@ -1,0 +1,27 @@
+<div #select>
+  <input type="text"
+         readonly
+         #inputText
+         [id]="dinamicId"
+         [(ngModel)]="value"
+         (click)="checkPositionList()"
+         (blur)="validated()"
+  />
+
+  <label
+      #textLabel
+      [for]="dinamicId"
+      [ngClass]="value ? 'active': ''"
+      (click)="focusInput(); showList = true">
+    {{label}}
+  </label>
+  <nk-list *ngIf="showList"
+           [data]="data"
+           [animated]="true"
+           [reverseList]="reverseList"
+           (click)="showList = false"
+           (mouseOver)="mouseIn($event)"
+           (selectItem)="selectItem($event)">
+  </nk-list>
+
+</div>

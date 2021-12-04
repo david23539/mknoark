@@ -1,0 +1,20 @@
+<div class="cnt-msg-chat" [ngClass]="{enter: msgEnter}">
+  <div class="wrapper-msg" >
+    <span class="text">{{text}}</span>
+    <span class="status" [ngClass]="status === 2 ? 'read' : status === 1 ? 'received' : ''"></span>
+    <span class="options icon-nk-more" (click)="showSubmenu = !showSubmenu"></span>
+  </div>
+
+  <div class="wrapper-sub-menu" *ngIf="showSubmenu">
+    <nk-list-simple
+      [data]="dataOptions"
+      (selectItem)="emitAction($event.value); showSubmenu = false"
+    ></nk-list-simple>
+  </div>
+
+  <div class="wrapper-time">
+    <span>{{time}}</span>
+    <span>{{author}}</span>
+  </div>
+</div>
+

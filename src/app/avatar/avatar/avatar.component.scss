@@ -1,0 +1,48 @@
+@import "../../../assets/base/colors";
+
+.cnt-avatar {
+  .wrapper-avatar {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    position: relative;
+    .initials {
+      display: block;
+      position: absolute;
+      left: 50%;
+      color: white;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .group {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 15px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .status {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      &.active {
+        background: $light-green-a400;
+      }
+      &.stand-by {
+        background: $amber-a700;
+      }
+      &.none {
+        background: $grey-500;
+      }
+      &.occupied {
+        background: $red-a400;
+      }
+    }
+  }
+}

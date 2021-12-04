@@ -1,0 +1,66 @@
+<div class="container--fluid">
+  <div class="container__row">
+    <div class="container__col-12">
+      <nav class="navbar
+      align-item-center
+      ">
+        <div class="container__row padding-top">
+          <div
+            class="container__col-4
+             container__col-sm-3
+              container__col-lg-2
+              container__col-xl-1
+               "
+          >
+            <span *ngIf="data.logo; else Logo" class="cursor-pointer">{{data.logo}}</span>
+            <ng-template #Logo>
+              <span class="cursor-pointer">MkNoark</span>
+            </ng-template>
+          </div>
+
+          <div class="container__col-8
+           container__col-sm-9
+            container__col-lg-10
+            container__col-xl-11
+            align-item-center"
+          >
+
+            <div class="container__row">
+              <div class="container__col-8
+               container__col-sm-6
+                container__col-lg-8
+                container__col-xl-9
+                 text-rigth"
+              >
+                <i class="material-icons cursor-pointer">notifications</i>
+              </div>
+
+              <div class="container__col-sm-5
+               container__col-lg-3
+               container__col-xl-2
+               text-rigth
+                hidden-sm-down"
+              >
+                <span> {{data.name}}</span>
+              </div>
+
+              <div class="container__col-4
+               container__col-sm-1
+                container__col-lg-1
+                container__col-xl-1"
+              >
+                <div *ngIf="data.avatar; else avatarDefault">
+                  <img  [src]="data.avatar" alt="image avatar" class="avatar cursor-pointer"/>
+                </div>
+                <ng-template #avatarDefault>
+                  <i class="material-icons cursor-pointer">face</i>
+                </ng-template>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <input
+    [(ngModel)]="value"
+    [attr.type]="type"
+    [ngClass]="{invalid: (invalid | async)}"
+    [autocomplete]="autoComplete"
+    [id]="identifier"
+    [name]="name"
+    [min]="min"
+    [max]="max"
+    [readOnly]="readonly"
+  />
+
+  <label *ngIf="label"
+         [for]="identifier"
+         [ngClass]="value ? 'active': ''"
+         #textLabel
+  >
+    {{label}}
+  </label>
+
+  <nk-validation-message
+    *ngIf="invalid | async"
+    [messages]="failures | async"
+  >
+  </nk-validation-message>
+</div>

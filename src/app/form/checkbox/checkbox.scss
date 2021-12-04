@@ -1,0 +1,71 @@
+@import "../../../assets/base/colors";
+@import "../../../assets/base/animations";
+
+.cnt-checkbox {
+  margin: 1rem auto;
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  [type="checkbox"] {
+    + span:not(.lever) {
+      cursor: pointer;
+      display: inline-block;
+      line-height: 25px;
+      height: 25px;
+      padding-left: 35px;
+      position: relative;
+      user-select: none;
+
+    }
+
+    + span:not(.lever):before,
+    &:not(.filled-in) + span:not(.lever):after {
+      border: 2px solid $gray-color;
+      content: '';
+      left: 0;
+      height: 20px;
+      position: absolute;
+      top: 3px;
+      transition: .25s;
+      width: 20px;
+      z-index: 0;
+
+    }
+
+    &:not(.filled-in) + span:not(.lever):after {
+      border: 0;
+      transform: scale(0);
+
+    }
+
+    &:not(:checked):disabled + span:not(.lever):before {
+      background-color: $gray-color;
+      border: 2px solid $gray-color;
+      height: 20px;
+      width: 20px;
+    }
+
+  }
+
+  [type="checkbox"]:checked {
+    + span:not(.lever):before {
+      backface-visibility: hidden;
+      border: 2px solid $green-500;
+      border-left: none;
+      border-top: none;
+      left: -5px;
+      height: 25px;
+      top: -1px;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+      width: 12px;
+
+    }
+  }
+}
+

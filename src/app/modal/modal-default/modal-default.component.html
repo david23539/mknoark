@@ -1,0 +1,61 @@
+<div class="overlay"
+     [ngClass]="{'lightHolder': backHolder}"
+     [ngStyle]="{'z-index': getZIndex()}"
+     >
+</div>
+
+<div class="cnt-modal"
+     [ngStyle]="{'z-index': getZIndex()}"
+     [@loadModal]
+>
+  <div class="modal-mdl">
+
+    <div class="close-modal"
+         *ngIf="optional"
+    >
+      <i
+        class="icon-nk-cross"
+        (click)="closed()"></i>
+    </div>
+
+    <div class="header-mdl">
+
+      <h1 class="text-header">
+        {{headerText}}
+      </h1>
+
+    </div>
+
+    <div class="body-mdl">
+      <ng-template #body></ng-template>
+    </div>
+    <div class="footer-mdl">
+
+      <div class="cancel"
+           *ngIf="buttonCancel"
+      >
+        <nk-button-default
+          [typeButton]="'default'"
+          [noShadow]="true"
+          (click)="closed()"
+        >
+          {{textButtonCancel}}
+        </nk-button-default>
+      </div>
+
+      <div class="submit"
+           *ngIf="buttonSubmit"
+      >
+        <nk-button-default
+          [noShadow]="true"
+          (click)="submit()"
+        >
+          {{textButtonSubmit}}
+        </nk-button-default>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

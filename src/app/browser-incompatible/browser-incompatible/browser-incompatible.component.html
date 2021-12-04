@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="container__row">
+
+    <div class="container__col-12">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="container__col-12">
+      <nk-banner-default [colorBanner]="'#ffee58'"
+                         [iconBanner]="'icon-nk-warning'"
+                         [textBanner]="textWarning"
+      >
+
+      </nk-banner-default>
+    </div>
+  </div>
+  <ng-template [ngIf]="dataBrowserRecommendation">
+    <div class="container__row">
+      <div class="container__col-12">
+        <h3>{{recommendationText}}</h3>
+      </div>
+      <div class="container__col-12">
+        <div class="container__row">
+<!--          <div class="container__col-12">-->
+<!--            <div class="container__row">-->
+
+              <div class="container__col-6
+                container__col-sm-3
+                container__col-lg-2
+                wrapper-browser-info"
+                *ngFor="let item of dataBrowserRecommendation"
+              >
+                <div class="container__row"
+                     (click)="redirectTo(item.url)"
+                >
+
+                  <i class="container__col-12"
+                     [class]="item.icon"
+                     [style.color]="item.colorIcon"></i>
+
+                  <span class="container__col-12"> {{item.textUrl}}</span>
+
+                </div>
+
+              </div>
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

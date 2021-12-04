@@ -1,0 +1,81 @@
+
+@import "animations";
+@import "colors";
+@import "../mixin/shadows";
+@import "variables";
+
+.cnt-toast {
+  position: fixed;
+  right: 0;
+  top: 1rem;
+  padding: 0 1rem;
+  z-index: 4;
+
+  .toast-float {
+    margin-bottom: 1rem;
+    min-width: 15vw;
+    min-height: 2rem;
+    max-width: 30vw;
+    background: blue;
+    position: relative;
+    color: white;
+    padding: 1.5rem 3rem 1rem 1rem;
+    animation: toastLine 4s ease-in;
+
+    .icon-nk-cross {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.6rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .icon {
+      display: inline;
+    }
+
+    > span {
+      font-size: 0.9rem;
+      padding-left: 10px;
+      vertical-align: super;
+    }
+
+    &.before-closed {
+      animation: closeToast 3s ease-in;
+      animation-fill-mode: forwards;
+    }
+
+
+    &.info {
+      background: $secondary;
+      @include shadow-element($secondary);
+    }
+
+    &.success {
+      background: $green-500;
+      @include shadow-element($green-500);
+    }
+
+    &.warning {
+      background: $yellow-800;
+      @include shadow-element($yellow-800);
+    }
+
+    &.danger {
+      background: $red-700;
+      @include shadow-element($red-700);
+    }
+  }
+
+  @media (max-width: $mobile-small) {
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 100%;
+
+    .toast-float {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+
+@import "../../../assets/base/colors";
+@import "../../../assets/base/variables";
+@import "../../../assets/mixin/shadows";
+@import "../../../assets/mixin/commons";
+@import "../../../assets/mixin/input";
+@import "../../../assets/base/animations";
+
+div{
+  position: relative;
+  background: transparent;
+  padding-top: 10px;
+  margin: 0.5rem 0;
+
+  input{
+    @include style-default();
+
+  }
+
+  label{
+    cursor: text;
+    position: absolute;
+    transition: all .25s;
+    left: 12px;
+    overflow: hidden;
+    right: 2rem;
+    text-overflow: ellipsis;
+    top: 10px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+}
+
+.active {
+  top: -4px !important;
+  left: 0 !important;
+  right: 0 !important;
+  color: $primary;
+  transform:scale(.8);
+}

@@ -1,0 +1,13 @@
+
+@mixin gradientColor($color1, $color2, $color3: null) {
+  @if($color3 != null) {
+    background: linear-gradient(to top, $color1, $color2, $color3);
+  }@else {
+    background: linear-gradient(to top, $color1, $color2);
+  }
+}
+
+@mixin centerElement() {
+  display: flex;
+  align-items: center;
+}

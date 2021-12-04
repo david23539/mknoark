@@ -1,0 +1,15 @@
+@import '../checkbox';
+
+.ng-valid + span {
+  color: $green-700;
+}
+
+.ng-touched.ng-invalid {
+  + span {
+    color: $red-700 !important;
+
+    &:before {
+      border: 3px solid $red-700 !important;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div [style.visibility]="statusMenu? 'visible': 'hidden'">
+<nav class="navbar"
+     [ngClass]="{
+     'ios': iosBrowser,
+     'active': active
+     }"
+>
+  <ul class="navbar-nav">
+    <li
+      class="nav-item"
+      (click)="showSubmenu(index)"
+      *ngFor="let item of data; index as index"
+    >
+
+      <div
+        class="nav-link"
+        *ngIf="item.data?.length > 0 else redirect"
+      >
+
+        <i  [ngClass]="item.icon"></i>
+
+        <span class="link-text">{{item.text}}</span>
+
+        <i
+          class="icon-nk-keyboard_arrow_down arrow hidden-xl-down"
+          [ngClass]="index === selectedItem ? 'explain': ''"
+        ></i>
+
+      </div>
+
+      <ng-template [ngIf]="selectedItem === index">
+        <ul class="cnt-sub-menu">
+          <li class="sub-nav-item"
+              (click)="subItemSelected(index); redirectTo(subItem.route)"
+              *ngFor="let subItem of item.data; index as index"
+          >
+            <div class="sub-nav-link">
+              <i *ngIf="subItem.icon"
+                 [ngClass]="subItem.icon"
+              ></i>
+              <span
+                [ngClass]="subSelectedItem === index ? 'selected-option': ''"
+                class="sub-link-text">
+                {{subItem.text}}
+              </span>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+
+
+      <ng-template #redirect>
+        <div (click)="redirectTo(item.route)" class="nav-link without-data">
+          <i  [ngClass]="item.icon"></i>
+          <span class="link-text">{{item.text}}</span>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+</nav>
+</div>

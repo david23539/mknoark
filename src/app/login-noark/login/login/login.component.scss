@@ -1,0 +1,50 @@
+@import "../../login";
+
+.cnt-login {
+  align-items: center;
+  background: $white;
+  box-shadow: -4px 0px 41px -4px $gradient-color;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  min-height: 370px;
+
+  @media (orientation: portrait) {
+    overflow: hidden;
+  }
+
+  @media (orientation: landscape) and (max-width: 1000px){
+    height: auto;
+    min-height: 100vh;
+  }
+
+  > div {
+    .title-login {
+      color: $grey-800;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .cnt-forms {
+      margin: 0 auto;
+
+      .cnt-pass {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .logo {
+      bottom: 10vh;
+
+      @media (max-width: $mobile-medium) {
+        bottom: 3vh;
+      }
+    }
+  }
+
+  .logo-enterprise {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

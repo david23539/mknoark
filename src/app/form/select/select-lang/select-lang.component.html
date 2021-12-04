@@ -1,0 +1,17 @@
+<div #select>
+  <input type="text"
+         readonly
+         #inputTextLang
+         (click)="checkPositionList()"
+         (blur)="validated()"
+  />
+
+  <nk-list-simple *ngIf="showList"
+                  [data]="data"
+                  [reverseList]="reverseList"
+                  (click)="showList = false"
+                  (mouseOver)="mouseIn($event)"
+                  (selectItem)="selectItem($event)">
+  </nk-list-simple>
+
+</div>

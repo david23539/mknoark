@@ -1,0 +1,51 @@
+@import "../list";
+
+.cnt-list {
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  background: white;
+  z-index: 2;
+  @include shadow-list-color();
+
+  .custom-style-list {
+    max-height: 120px;
+    overflow-y: auto;
+  }
+
+  .style-list {
+    background: $white;
+    list-style: none;
+    padding: 5px;
+    margin: 0 0 15px;
+    text-align: center;
+
+    > li {
+      border-bottom: 1px solid $grey-600;
+      padding: 10px;
+      font-size: 13px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .collapse {
+        display: none;
+      }
+
+      > hr {
+        display: none;
+        margin: 0;
+      }
+
+    }
+
+    .animated:hover {
+      transition: all .5s;
+    }
+  }
+}
+
+.reverseList {
+  bottom: 100%;
+}

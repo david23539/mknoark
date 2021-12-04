@@ -1,0 +1,32 @@
+@import '../card';
+
+.card {
+  border-radius: $border-radius-base;
+  min-height: 15px;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  @include shadow-card-color();
+
+  .style-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .style-separator{
+
+    height: 1px;
+    background: $grey-a400;
+    border: none;
+  }
+
+  .style-body, .style-footer {
+    padding: 0 1rem;
+  }
+}
+
+.card-scroll {
+  overflow: visible;
+}

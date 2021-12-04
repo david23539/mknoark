@@ -1,0 +1,16 @@
+.invalid {
+  box-shadow: 0 1px 0 $red-700 !important;
+  border-bottom: 1px solid $red-700 !important;
+}
+.invalid + label {
+  color: $red-700 !important;
+}
+
+.ng-valid.ng-touched {
+  box-shadow: 0 1px 0 $green-700;
+  border-bottom: 1px solid $green-700;
+}
+
+.ng-valid.ng-touched + label {
+  color: $green-700;
+}

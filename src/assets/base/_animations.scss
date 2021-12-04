@@ -1,0 +1,154 @@
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes menuSlider {
+  0% {
+    opacity: 0;
+    margin-top: -10%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes spanMenuSlider {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    display: inline;
+    opacity: 1;
+  }
+}
+
+@keyframes checkedDefaultOut {
+  0% {
+    opacity: 1.1;
+    height: 10px;
+    width: 10px;
+
+  }
+  50% {
+    opacity: .5;
+    transform: scale(.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.9);
+    top: 25%;
+    left: 0;
+  }
+
+}
+
+@keyframes bounceHorizontal {
+  0% {
+    transform: translateX(-19vw);
+  }
+
+  10% {
+    transform: translateX(80vw);
+  }
+
+  20% {
+    transform: translateX(60vw);
+  }
+
+  50% {
+    transform: translateX(99vw);
+  }
+
+  60% {
+    transform: translateX(0vw);
+  }
+
+  70% {
+    transform: translateX(20vw);
+  }
+
+  100% {
+    transform: translateX(-19vw);
+  }
+
+}
+
+@keyframes blur {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toastLine {
+  0% {
+    opacity: 0;
+    left: 20vw;
+  }
+  20% {
+    opacity: 1;
+    left: 0;
+  }
+
+  50% {
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+  }
+
+  80% {
+    opacity: .5;
+    bottom: 70vh;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 100vh;
+  }
+
+}
+
+@keyframes closeToast {
+  from {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 0;
+    bottom: 50vh;
+  }
+}
+
+@keyframes closeCookie {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rotateSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../button";
+
+.cnt-float-button {
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  button {
+    appearance: none;
+    cursor: pointer;
+    height: 4rem;
+    border: none;
+    width: 4rem;
+    border-radius: 50%;
+    background: $primary;
+    overflow: hidden;
+    position: relative;
+    @include shadow-button-color($primary);
+    i {
+      color: $white;
+    }
+    &:focus{
+      outline: none;
+    }
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 4rem;
+      border-radius: 50%;
+      height: 4rem;
+      background: $secondary;
+      transform: scale(2);
+      opacity: 0;
+      transition: all .8s;
+      top: 0;
+      left: 0;
+    }
+    &:active:after {
+      transform: scale(0);
+      opacity: .8;
+      transition: all 0s;
+    }
+    &.custom-bg {
+      &:after {
+        background: $white !important;
+
+      }
+    }
+  }
+}

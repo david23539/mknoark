@@ -1,0 +1,16 @@
+@import "../../../assets/base/colors";
+
+.wrapper-browser-info {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  i, span {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+  }
+  i {
+    font-size: 4rem;
+  }
+
+}

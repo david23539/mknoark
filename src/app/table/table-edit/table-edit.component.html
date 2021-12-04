@@ -1,0 +1,34 @@
+
+<div class="cnt-table">
+  <div class="cnt-scroll-table">
+    <table>
+      <thead>
+      <th>
+      </th>
+      <th *ngFor="let item of headTitles; let i = index" (click)="headerIndex = i;orderElement(i)">
+        <span [ngClass]="order ? headerIndex === i ? 'asc': '' : headerIndex === i  ? 'desc': ''" >{{item}}</span>
+      </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of bodyTable; let i = index">
+        <td class="index" (click)="removeItem(item)">
+          <span class="icon-nk-trash-can"></span>
+        </td>
+        <td
+          (click)="selectItem(item)"
+          #colorColumn
+          *ngFor="let property of propertyContent; let e = index"
+          [style.color]="getColorColumn(e)"
+        >
+          <span>{{item[property]}}</span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="legend"
+       class="cnt-legend"
+  >
+    <span class="legend" *ngFor="let itemLegend of legend" [style.color]="itemLegend.color"> {{itemLegend.value}}</span>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="cnt-avatar">
+  <div class="wrapper-avatar" [nkBadge]="notifications" [style]="{
+  background: !urlImg ? colorBg : 'transparent',
+  height: weight + 'px',
+  width: weight + 'px'
+  }"
+       (click)="sendDataSelected()"
+  >
+    <span class="initials" *ngIf="!urlImg">{{initials}}</span>
+    <i *ngIf="isGroup" class="icon-nk-group group"></i>
+    <img *ngIf="urlImg" [src]="urlImg" alt="logo">
+    <span class="status" [ngClass]="status"></span>
+  </div>
+</div>

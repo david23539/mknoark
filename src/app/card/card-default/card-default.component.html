@@ -1,0 +1,23 @@
+<div class="card"
+     [ngClass]="scroll ? 'card-scroll': ''"
+     [ngStyle]="{
+     'margin-bottom': spaceBottom > 0 ? spaceBottom+'rem' : '0',
+     'max-height': height? 'calc(100vh - '+height+'rem)': 'auto'
+     }">
+
+  <div class="style-header">
+    <ng-content select="[header]"></ng-content>
+  </div>
+
+  <hr class="style-separator">
+
+  <div class="style-body">
+    <ng-content select="[body]"></ng-content>
+  </div>
+
+  <hr class="style-separator">
+
+  <div class="style-footer" *ngIf="footer">
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>

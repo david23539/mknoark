@@ -1,0 +1,45 @@
+
+<nav class="navbar align-item-center"
+     [ngStyle]=" {
+     'z-index': zIndex,
+     'position': noFixed? 'relative': 'fixed'
+     }"
+     #navbar
+>
+  <div class="container__row">
+    <div class="container__col-2
+    container__col-sm-1
+    container__col-xl-1
+    icon-menu
+    ">
+      <div class="icon"
+           (click)="controlStateMenu(deployMenu); statusMenu.emit(deployMenu)"
+      >
+        <div class="hamburger"
+             [ngClass]="deployMenu?'deploy':'undeploy'"
+        >
+        </div>
+      </div>
+    </div>
+
+    <div class="container__col-10
+      container__col-sm-10
+      container__col-lg-9
+      container__col-xl-9
+      cnt-title
+    ">
+      <h4 class="title">
+        {{title}}
+      </h4>
+    </div>
+
+    <div class="
+    container__col-xl-1
+    container__col-lg-1
+     version
+     hidden-lg-down
+    ">
+      <span>Version {{version}}</span>
+    </div>
+  </div>
+</nav>

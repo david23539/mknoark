@@ -1,0 +1,28 @@
+<div class="cnt-list"
+     [ngClass]="reverseList ===true?'reverseList':''"
+>
+  <div class="container--fluid">
+    <div class="container__row">
+      <div class="container__col-12"
+           (mouseout)="mouseOver.emit(false)"
+      >
+        <ul class="style-list"
+
+            [ngClass]="limitHeight === true ? 'custom-style-list': ''"
+        >
+          <li *ngFor="let item of data"
+              #list
+              (mouseenter)="mouseOver.emit(true)"
+              (click)="selectItem.emit({value: item.value, text: item.text})">
+            <span #text
+                  (mouseenter)="mouseOver.emit(true)"
+            >
+                {{item.text}}
+              </span>
+            <hr (mouseenter)="mouseOver.emit(true)">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

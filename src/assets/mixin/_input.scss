@@ -1,0 +1,29 @@
+@import "../base/colors";
+@mixin style-default() {
+    border: none;
+    border-radius: 0;
+    position: relative;
+    border-bottom: 1px solid $gray-color;
+    outline: none;
+    padding-left: 12px;
+    transition: all .25s;
+    width: 100%;
+
+  &:focus {
+    box-shadow: 0 1px 0 $primary;
+    border-bottom: 1px solid $primary;
+  }
+
+  &:focus + label {
+    top: -4px;
+    left: 0;
+    color: $primary;
+    transform: scale(.8);
+  }
+}
+
+@mixin style_active_file() {
+  border-bottom-color: $primary;
+  box-shadow: 0 1px 0 $primary;
+  color: $primary;
+}

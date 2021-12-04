@@ -1,0 +1,60 @@
+@import '../card';
+
+.cnt-card {
+  position: relative;
+  height: 100vh;
+  @media (max-width: $hd-ready) {
+    opacity: 0.85;
+  }
+
+  .card {
+    background: $white;
+    border-radius: $border-radius-base;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    @include shadow-card-color();
+
+    @media (max-width: $hd-ready) {
+      border-radius: initial;
+      height: 100vh;
+    }
+
+    .style-header {
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      word-break: break-word;
+      &.ios {
+        padding-bottom: 2.5rem;
+      }
+
+      @media (max-width: $hd-ready) {
+        justify-content: center;
+      }
+    }
+
+    .style-body, .style-footer {
+      padding: 0 1rem;
+    }
+
+    .style-body {
+      flex: 1 0 auto;
+    }
+
+    .style-footer {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &.card-scroll {
+      overflow: auto;
+    }
+  }
+}
+

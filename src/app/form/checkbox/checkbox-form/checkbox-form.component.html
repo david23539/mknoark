@@ -1,0 +1,16 @@
+<div class="cnt-checkbox">
+  <label>
+    <input [(ngModel)]="value"
+           type="checkbox"
+           checked="checked"
+           required
+    >
+    <span>{{label}}</span>
+
+  </label>
+
+  <nk-validation-message
+    *ngIf="invalid | async"
+    [messages]="failures | async">
+  </nk-validation-message>
+</div>

@@ -1,0 +1,123 @@
+@import "breadcrumb";
+
+.cnt-breadcrumb {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+
+    .step-line {
+      background: $grey-400;
+      @include shadow-list-color($grey-400);
+
+      border-radius: 50%;
+      height: 2rem;
+      margin-top: 8px;
+      transition: all .25s;
+      width: 2rem;
+
+      &.active {
+        background: $primary;
+        border-radius: 50%;
+        height: 3rem;
+        margin-top: 0;
+        position: relative;
+        width: 3rem;
+        @include shadow-list-color($primary);
+
+        &:after {
+          border: 3px solid $thirty;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          left: 50%;
+          height: 2.5rem;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 2.5rem;
+        }
+
+        .step-number {
+          color: $white;
+          font-size: 1.2rem;
+        }
+
+        .step-title {
+          color: $primary;
+        }
+      }
+
+      &.subActive {
+        background: $green-700;
+        @include shadow-list-color($green-700);
+
+        .step-number {
+          color: $white;
+        }
+
+        .step-title {
+          color: $green-700;
+        }
+      }
+
+      &.inactive {
+        pointer-events: none;
+
+        .step-title {
+          color: $grey-600;
+        }
+      }
+
+      .cnt-step {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50%;
+        transform: translateY(-50%);
+
+        .step-number {
+          cursor: pointer;
+          font-weight: bold;
+
+        }
+
+        .step-title {
+          font-weight: bold;
+          position: absolute;
+          top: -2.5rem;
+          white-space: nowrap;
+          @media(max-width: $mobile-medium) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bar-active, .bar-inactive {
+    height: .5rem;
+    position: absolute;
+    top: calc(50% - .25rem);
+    transition: width .25s ease-out;
+  }
+
+  .bar-active {
+    background: $green-700;
+    left: 0;
+    @include shadow-element($green-700);
+  }
+
+  .bar-inactive {
+    background: $grey-400;
+    right: 0;
+    width: 100%;
+    @include shadow-element($grey-400);
+  }
+}
