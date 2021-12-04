@@ -14,9 +14,9 @@ describe('CookieDefaultService', () => {
   beforeEach(() => {
     let storeMock = {};
 
-    spyOn(localStorage, 'getItem').and.callFake(key => storeMock[key]);
-    spyOn(localStorage, 'setItem').and.callFake((key, value) => storeMock[key] = value);
-    spyOn(localStorage, 'removeItem').and.callFake(() => {
+    jest.spyOn(localStorage, 'getItem').mockImplementation(key => storeMock[key]);
+    jest.spyOn(localStorage, 'setItem').mockImplementation((key, value) => storeMock[key] = value);
+    jest.spyOn(localStorage, 'removeItem').mockImplementation(() => {
       storeMock = {};
     });
     localStorage.setItem('lang', 'es');

@@ -5,10 +5,10 @@ describe('RepeatTextDirective', () => {
   let directive;
   // const control: AbstractControl;
   beforeEach(() => {
-    directive = new RepeatTextDirective('prueba', 'true');
+    directive = new RepeatTextDirective('true');
   });
   it('should create an instance', () => {
-    directive = new RepeatTextDirective('prueba', 'true');
+    directive = new RepeatTextDirective('true');
     expect(directive).toBeTruthy();
   });
 

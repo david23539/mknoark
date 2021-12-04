@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {NavSliderInterface} from '../interfaces/nav-slider-interface';
 import {NavSliderComponent} from './nav-slider.component';
 

@@ -39,7 +39,7 @@ export class InputFileFormComponent extends ElementBase<any> implements OnInit {
       this.textLabel.nativeElement.className =
         globalConstant.FORMS_STYLES.ACTIVE;
     }
-    this.label = Literal[CookiesService.getCookie('lang')].SELECT_FILE;
+    this.label = Literal[CookiesService.getCookie('lang')]?.SELECT_FILE;
   }
 
   public getNameFile(fileInput: any) {

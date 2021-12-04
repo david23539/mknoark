@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
 import {BrowserIncompatibleComponent} from './browser-incompatible.component';
+import {BannerModule} from "../../banner/banner.module";
 
 describe('BrowserIncompatibleComponent', () => {
   let component: BrowserIncompatibleComponent;
@@ -10,6 +11,7 @@ describe('BrowserIncompatibleComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [BrowserIncompatibleComponent],
+        imports: [BannerModule]
       }).compileComponents();
     })
   );

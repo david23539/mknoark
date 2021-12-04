@@ -68,6 +68,6 @@ describe('CardDefaultComponent', () => {
     fixture.detectChanges();
     expect(
       fixture.nativeElement.querySelector('.card').style.maxHeight
-    ).toEqual('');
+    ).toEqual('auto');
   });
 });

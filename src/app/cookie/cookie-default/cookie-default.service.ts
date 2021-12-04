@@ -93,7 +93,7 @@ export class CookieDefaultService {
     this.cookie = this.render.createElement('div');
     this.render.addClass(this.cookie, 'cookie-default');
     const textCookie = this.render.createText(
-      this.policy ? this.policy : literalsCookie[this.lang].MSG_SHORT_COOKIE
+      this.policy ? this.policy : literalsCookie[this.lang]?.MSG_SHORT_COOKIE
     );
 
     const icon = this.render.createElement('div');
@@ -102,7 +102,7 @@ export class CookieDefaultService {
     this.render.addClass(icon, 'icon-warning');
 
     const button = this.render.createElement('button');
-    const textButton = this.render.createText(Literal[this.lang].ACCEPT);
+    const textButton = this.render.createText(Literal[this.lang]?.ACCEPT);
     this.render.appendChild(button, textButton);
     this.render.addClass(button, 'cnt-button-cookie');
     this.render.listen(button, globalConstant.EVENTS.CLICK, event =>
@@ -111,7 +111,7 @@ export class CookieDefaultService {
 
     const buttonMoreInfo = this.render.createElement('button');
     const textButtonMoreInfo = this.render.createText(
-      Literal[this.lang].MORE_INFO
+      Literal[this.lang]?.MORE_INFO
     );
     this.render.appendChild(buttonMoreInfo, textButtonMoreInfo);
     this.render.addClass(buttonMoreInfo, 'more-info');

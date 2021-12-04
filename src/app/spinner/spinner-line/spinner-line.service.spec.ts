@@ -18,7 +18,7 @@ describe('SpinnerLineService', () => {
   it('showError method', () => {
     const service: SpinnerLineService = TestBed.inject(SpinnerLineService);
     service.showSpinner();
-    spyOn(window, 'setTimeout');
+    jest.spyOn(window, 'setTimeout').mockImplementation();
     service.showError();
     expect(setTimeout).toHaveBeenCalled();
   });

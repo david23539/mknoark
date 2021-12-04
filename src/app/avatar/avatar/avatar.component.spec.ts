@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {AvatarComponent} from './avatar.component';
+import {BadgeDirective} from "../../tooltip/badge/badge.directive";
 
 describe('AvatarComponent', () => {
   let component: AvatarComponent;
@@ -8,7 +9,8 @@ describe('AvatarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AvatarComponent ]
+      declarations: [ AvatarComponent, BadgeDirective ]
+
     })
     .compileComponents();
   });
