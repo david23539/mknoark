@@ -22,4 +22,16 @@ describe('ButtonFloatComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should bgColor', () => {
+    component.bgColor('');
+  });
+
+  it('should clickedButton', () => {
+    component.clickedButton();
+  });
+
+  it('should setBackgroundColor', () => {
+    (component as any).setBackgroundColor('');
+  });
 });

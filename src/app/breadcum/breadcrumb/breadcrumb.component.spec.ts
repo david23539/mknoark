@@ -23,4 +23,22 @@ describe('BreadcrumbComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('method setSelectedActive', () => {
+    component.setSelectedActive(2);
+  });
+
+  it('method setActive', () => {
+    component.active = 2;
+  });
+
+  it('method stepActive', () => {
+    const data = component.stepActive;
+  });
+
+  it('method setSelectedActive', () => {
+    component.blockSteps = true;
+    (component as any)._active = 2;
+    component.setSelectedActive(2);
+  });
 });

@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
 import {BrowserIncompatibleComponent} from './browser-incompatible.component';
-import {BannerModule} from "../../banner/banner.module";
+import {BannerModule} from '../../banner/banner.module';
 
 describe('BrowserIncompatibleComponent', () => {
   let component: BrowserIncompatibleComponent;
@@ -24,5 +24,27 @@ describe('BrowserIncompatibleComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('method lang', () => {
+    component.lang = 'es';
+  });
+
+  it('method browserAvailable', () => {
+    component.browserAvailable = [{
+      icon: 'string',
+      colorIcon: 'string',
+      url: 'string',
+      textUrl: 'string',
+    }];
+  });
+
+  it('method redirectTo', () => {
+    jest.spyOn(window, 'open').getMockImplementation();
+    component.redirectTo('');
+  });
+
+  it('method _setLanguage', () => {
+    (component as any)._setLanguage('es');
   });
 });
