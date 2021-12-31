@@ -1,5 +1,5 @@
-import { ElementBase } from './element-base';
 import { NgModel } from '@angular/forms';
+import { ElementBase } from './element-base';
 import { AsyncValidatorArray, ValidatorArray } from './validate';
 
 class ElementBaseTest extends ElementBase<string> {

@@ -1,5 +1,5 @@
-import { TooltipDirective } from './tooltip.directive';
 import { ElementRef, Renderer2, RendererStyleFlags2 } from '@angular/core';
+import { TooltipDirective } from './tooltip.directive';
 
 class render2test extends Renderer2 {
   addClass(el: any, name: string): void {}

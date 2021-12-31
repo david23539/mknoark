@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
-import { InputFileFormComponent } from './input-file-form.component';
 import { FormsModule } from '@angular/forms';
 import { ValidationMessageComponent } from '../../validation-form/validation-message/validation-message.component';
 import { CookiesService } from '../../../service/cookies/cookies.service';
+import { InputFileFormComponent } from './input-file-form.component';
 
 describe('InputFileFormComponent', () => {
   let component: InputFileFormComponent;

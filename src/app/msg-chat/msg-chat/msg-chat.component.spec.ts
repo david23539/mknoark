@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MsgChatComponent } from './msg-chat.component';
 import { ListModule } from '../../list/list.module';
+import { MsgChatComponent } from './msg-chat.component';
 
 describe('MsgChatComponent', () => {
   let component: MsgChatComponent;

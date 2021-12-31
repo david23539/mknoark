@@ -13,7 +13,6 @@ import { FormModule } from './form/form.module';
 import { InputModule } from './form/input/input.module';
 import { SelectModule } from './form/select/select.module';
 import { ListModule } from './list/list.module';
-import { LoginNoarkModule } from './login-noark/login-noark.module';
 import { ModalServiceDefaultService } from './modal/modal-service/modal-service-default.service';
 import { ModalModule } from './modal/modal.module';
 import { NavBarModule } from './nav-bar/nav-bar.module';
@@ -39,7 +38,6 @@ import { MsgChatModule } from './msg-chat/msg-chat.module';
     TableModule,
     CheckboxModule,
     SelectModule,
-    LoginNoarkModule,
     ModalModule,
     BrowserIncompatibleModule,
     BannerModule,
