@@ -1,5 +1,11 @@
-import {Directive, ElementRef, HostListener, Input, Renderer2,} from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import {
+  Directive,
+  ElementRef,
+  HostListener,
+  Input,
+  Renderer2,
+} from '@angular/core';
+import { globalConstant } from '../../utils/constant';
 
 @Directive({
   selector: '[nkTooltip]',

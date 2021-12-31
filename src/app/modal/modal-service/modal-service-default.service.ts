@@ -1,12 +1,17 @@
-import {ComponentFactory, ComponentFactoryResolver, ComponentRef, Injectable,} from '@angular/core';
-import {Observable, Subject, Subscription} from 'rxjs';
-import {globalConstant} from '../../utils/constant';
-import {ModalConfigurationInterface} from '../modal-configuration.interface';
-import {ModalDefaultComponent} from '../modal-default/modal-default.component';
-import {ModalComponentInterface} from '../modal-default/modalComponent.interface';
-import {ModalInterfaceIN} from '../modalInterface';
-import {RamdonClassInterface} from '../ramdon-class.interface';
-import {StatusModalInterface} from './status-modal.interface';
+import {
+  ComponentFactory,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injectable,
+} from '@angular/core';
+import { Observable, Subject, Subscription } from 'rxjs';
+import { globalConstant } from '../../utils/constant';
+import { ModalConfigurationInterface } from '../modal-configuration.interface';
+import { ModalDefaultComponent } from '../modal-default/modal-default.component';
+import { ModalComponentInterface } from '../modal-default/modalComponent.interface';
+import { ModalInterfaceIN } from '../modalInterface';
+import { RamdonClassInterface } from '../ramdon-class.interface';
+import { StatusModalInterface } from './status-modal.interface';
 
 @Injectable()
 export class ModalServiceDefaultService {
@@ -51,9 +56,8 @@ export class ModalServiceDefaultService {
     );
     this._cntModalRef = this._initModalComponent(modalInterfaceIN.modal);
 
-    this._subscription = ((
-      this._cntModalRef.instance as ModalDefaultComponent
-    )).action.subscribe(resp => {
+    this._subscription = (this._cntModalRef
+      .instance as ModalDefaultComponent).action.subscribe(resp => {
       if (resp.close) {
         this.set({ close: true, submit: false, open: false });
       } else if (resp.submit) {
@@ -68,9 +72,8 @@ export class ModalServiceDefaultService {
     });
     this._paramsForModal.component = componentClass;
     this._paramsForModal.params = modalInterfaceIN?.component?.paramsComponent;
-    ((
-      this._cntModalRef.instance as ModalDefaultComponent
-    )).customComponent = this._paramsForModal;
+    (this._cntModalRef
+      .instance as ModalDefaultComponent).customComponent = this._paramsForModal;
     this.set({
       open: true,
       submit: false,

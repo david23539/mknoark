@@ -1,10 +1,23 @@
-import {Component, ElementRef, Inject, Input, OnInit, Optional, ViewChild,} from '@angular/core';
-import {NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgModel,} from '@angular/forms';
-import {CookiesService} from '../../../service/cookies/cookies.service';
-import {globalConstant} from '../../../utils/constant';
-import {Literal} from '../../../utils/literal';
-import {ElementBase} from '../../element-base';
-import {ValidationControlService} from '../../service/validation-control.service';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  Input,
+  OnInit,
+  Optional,
+  ViewChild,
+} from '@angular/core';
+import {
+  NG_ASYNC_VALIDATORS,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  NgModel,
+} from '@angular/forms';
+import { CookiesService } from '../../../service/cookies/cookies.service';
+import { globalConstant } from '../../../utils/constant';
+import { Literal } from '../../../utils/literal';
+import { ElementBase } from '../../element-base';
+import { ValidationControlService } from '../../service/validation-control.service';
 
 @Component({
   selector: 'nk-input-file-form',

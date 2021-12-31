@@ -1,6 +1,11 @@
-import {ElementRef, Injectable, Renderer2, RendererFactory2,} from '@angular/core';
-import {globalConstant} from '../../utils/constant';
-import {TypeToast} from '../types';
+import {
+  ElementRef,
+  Injectable,
+  Renderer2,
+  RendererFactory2,
+} from '@angular/core';
+import { globalConstant } from '../../utils/constant';
+import { TypeToast } from '../types';
 
 @Injectable({
   providedIn: 'root',

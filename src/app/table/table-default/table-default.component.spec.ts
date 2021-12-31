@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {TableDefaultComponent} from './table-default.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TableDefaultComponent } from './table-default.component';
 
 describe('TableDefaultComponent', () => {
   let component: TableDefaultComponent;

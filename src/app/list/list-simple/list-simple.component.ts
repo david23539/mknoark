@@ -1,5 +1,13 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output, QueryList, ViewChildren,} from '@angular/core';
-import {ListInterface} from '../interfaces/list-interface';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import { ListInterface } from '../interfaces/list-interface';
 
 @Component({
   selector: 'nk-list-simple',

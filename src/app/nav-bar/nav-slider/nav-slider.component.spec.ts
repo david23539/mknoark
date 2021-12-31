@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {NavSliderInterface} from '../interfaces/nav-slider-interface';
-import {NavSliderComponent} from './nav-slider.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NavSliderInterface } from '../interfaces/nav-slider-interface';
+import { NavSliderComponent } from './nav-slider.component';
 
 describe('NavSliderComponent', () => {
   let component: NavSliderComponent;

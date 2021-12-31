@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {NavBarDefaultComponent} from './nav-bar-default.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NavBarDefaultComponent } from './nav-bar-default.component';
 
 describe('NavBarDefaultComponent', () => {
   let component: NavBarDefaultComponent;

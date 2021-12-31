@@ -1,6 +1,6 @@
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {NavSliderComponent} from './nav-bar/nav-slider/nav-slider.component';
+import { TestBed, waitForAsync } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { NavSliderComponent } from './nav-bar/nav-slider/nav-slider.component';
 
 xdescribe('AppComponent', () => {
   beforeEach(

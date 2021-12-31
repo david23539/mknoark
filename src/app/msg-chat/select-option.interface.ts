@@ -1,4 +1,4 @@
-import {TypeActionType} from './types/type-action.type';
+import { TypeActionType } from './types/type-action.type';
 
 export interface SelectOptionInterface {
   text: string;

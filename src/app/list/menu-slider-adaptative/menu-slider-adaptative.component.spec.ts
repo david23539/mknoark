@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {MenuSliderAdaptativeComponent} from './menu-slider-adaptative.component';
+import { MenuSliderAdaptativeComponent } from './menu-slider-adaptative.component';
 
 describe('MenuSliderAdaptativeComponent', () => {
   let component: MenuSliderAdaptativeComponent;

@@ -1,7 +1,7 @@
-import {ElementRef} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {InputDefaultComponent} from './input-default.component';
+import { ElementRef } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { InputDefaultComponent } from './input-default.component';
 
 describe('InputDefaultComponent', () => {
   let component: InputDefaultComponent;

@@ -7,9 +7,9 @@ import {
   Output,
   ViewContainerRef,
 } from '@angular/core';
-import {globalConstant} from '../../utils/constant';
-import {ListInterface} from '../interfaces/list-interface';
-import {MenuInterface} from '../interfaces/menu.interface';
+import { globalConstant } from '../../utils/constant';
+import { ListInterface } from '../interfaces/list-interface';
+import { MenuInterface } from '../interfaces/menu.interface';
 
 @Component({
   selector: 'nk-menu-slider-adaptative',

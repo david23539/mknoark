@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {CardDefaultComponent} from './card-default.component';
+import { CardDefaultComponent } from './card-default.component';
 
 describe('CardDefaultComponent', () => {
   let component: CardDefaultComponent;

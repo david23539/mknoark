@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { globalConstant } from '../../utils/constant';
 
 @Component({
   selector: 'nk-navbar-default',

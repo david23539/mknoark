@@ -1,9 +1,9 @@
-import {ElementRef} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule, RequiredValidator} from '@angular/forms';
-import {composeValidators, ValidatorArray} from '../../validate';
-import {ValidationMessageComponent} from '../../validation-form/validation-message/validation-message.component';
-import {InputFormComponent} from './input-form.component';
+import { ElementRef } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule, RequiredValidator } from '@angular/forms';
+import { composeValidators, ValidatorArray } from '../../validate';
+import { ValidationMessageComponent } from '../../validation-form/validation-message/validation-message.component';
+import { InputFormComponent } from './input-form.component';
 
 describe('InputFormComponent', () => {
   let component: InputFormComponent;

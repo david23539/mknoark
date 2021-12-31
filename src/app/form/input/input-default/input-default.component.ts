@@ -1,7 +1,13 @@
-import {Component, DoCheck, ElementRef, Input, ViewChild,} from '@angular/core';
-import {NG_VALUE_ACCESSOR, NgModel} from '@angular/forms';
-import {globalConstant} from '../../../utils/constant';
-import {ValueAccessorBase} from '../../value-accessor-base';
+import {
+  Component,
+  DoCheck,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
+import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
+import { globalConstant } from '../../../utils/constant';
+import { ValueAccessorBase } from '../../value-accessor-base';
 
 @Component({
   selector: 'nk-input-default',

@@ -1,4 +1,4 @@
-import {MaxSizeFileDirective} from './max-size-file.directive';
+import { MaxSizeFileDirective } from './max-size-file.directive';
 
 describe('MaxSizeFileDirective', () => {
   it('should create an instance', () => {

@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {SpinnerLineService} from './spinner-line.service';
+import { SpinnerLineService } from './spinner-line.service';
 
 describe('SpinnerLineService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

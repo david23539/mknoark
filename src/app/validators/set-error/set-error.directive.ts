@@ -1,5 +1,5 @@
-import {Directive, forwardRef, Input} from '@angular/core';
-import {AbstractControl, NG_VALIDATORS} from '@angular/forms';
+import { Directive, forwardRef, Input } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 @Directive({
   selector: '[setError][ngModel]',

@@ -1,8 +1,22 @@
-import {ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, Input, Optional, ViewChild,} from '@angular/core';
-import {NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgModel,} from '@angular/forms';
-import {globalConstant} from '../../../utils/constant';
-import {ElementBase} from '../../element-base';
-import {SelectInterface} from '../select-interface';
+import {
+  ChangeDetectorRef,
+  Component,
+  DoCheck,
+  ElementRef,
+  Inject,
+  Input,
+  Optional,
+  ViewChild,
+} from '@angular/core';
+import {
+  NG_ASYNC_VALIDATORS,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  NgModel,
+} from '@angular/forms';
+import { globalConstant } from '../../../utils/constant';
+import { ElementBase } from '../../element-base';
+import { SelectInterface } from '../select-interface';
 
 @Component({
   selector: 'nk-select-form',

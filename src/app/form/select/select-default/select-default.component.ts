@@ -7,10 +7,10 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-import {NG_VALUE_ACCESSOR, NgModel} from '@angular/forms';
-import {globalConstant} from '../../../utils/constant';
-import {ValueAccessorBase} from '../../value-accessor-base';
-import {SelectInterface} from '../select-interface';
+import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
+import { globalConstant } from '../../../utils/constant';
+import { ValueAccessorBase } from '../../value-accessor-base';
+import { SelectInterface } from '../select-interface';
 
 @Component({
   selector: 'nk-select-default',

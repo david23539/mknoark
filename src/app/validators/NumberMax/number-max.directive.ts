@@ -1,5 +1,11 @@
-import {Directive, forwardRef, Input} from '@angular/core';
-import {AbstractControl, NG_VALIDATORS, Validator, ValidatorFn, Validators,} from '@angular/forms';
+import { Directive, forwardRef, Input } from '@angular/core';
+import {
+  AbstractControl,
+  NG_VALIDATORS,
+  Validator,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 
 @Directive({
   selector: '[numberMax][ngModel]',

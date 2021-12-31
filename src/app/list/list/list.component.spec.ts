@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {ListInterface} from '../interfaces/list-interface';
-import {ListComponent} from './list.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ListInterface } from '../interfaces/list-interface';
+import { ListComponent } from './list.component';
 
 describe('ListComponent', () => {
   let component: ListComponent;

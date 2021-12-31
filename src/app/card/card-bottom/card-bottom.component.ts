@@ -1,5 +1,10 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit,} from '@angular/core';
-import {CheckIosService} from '../../service/check-ios/check-ios.service';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { CheckIosService } from '../../service/check-ios/check-ios.service';
 
 @Component({
   selector: 'nk-card-bottom',

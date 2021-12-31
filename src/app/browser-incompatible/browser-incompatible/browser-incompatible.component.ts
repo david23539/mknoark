@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {DataBrowserRecommendationInterface} from '../data-browser-recommendation.interface';
-import {literal} from '../literals';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataBrowserRecommendationInterface } from '../data-browser-recommendation.interface';
+import { literal } from '../literals';
 
 @Component({
   selector: 'nk-browser-enabled',

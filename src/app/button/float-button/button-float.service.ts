@@ -6,15 +6,14 @@ import {
   EmbeddedViewRef,
   Injectable,
   Injector,
-  OnDestroy
+  OnDestroy,
 } from '@angular/core';
-import {Observable, of, Subject, timer} from 'rxjs';
-import {takeUntil} from 'rxjs/operators';
-import {ButtonFloatComponent} from './button-float/button-float.component';
-
+import { Observable, of, Subject, timer } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { ButtonFloatComponent } from './button-float/button-float.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ButtonFloatService implements OnDestroy {
   private _cntFloatButton: ComponentFactory<ButtonFloatComponent>;
@@ -26,7 +25,7 @@ export class ButtonFloatService implements OnDestroy {
     private _componentFactoryResolver: ComponentFactoryResolver,
     private _appRef: ApplicationRef,
     private _injector: Injector
-  ) { }
+  ) {}
   private static _getRootNode(refComponent: ComponentRef<any>): HTMLElement {
     return (refComponent.hostView as EmbeddedViewRef<any>)
       .rootNodes[0] as HTMLElement;
@@ -40,13 +39,15 @@ export class ButtonFloatService implements OnDestroy {
     this._unsubscribe.unsubscribe();
   }
 
-
   /**
    * @description Show floating button
    * @param icon
    * @param bgColor
    */
-  public showButtonFloat<T>(icon: string, bgColor?: string): Observable<boolean> {
+  public showButtonFloat<T>(
+    icon: string,
+    bgColor?: string
+  ): Observable<boolean> {
     let isExist = false;
     if (this._cntFloatButton) {
       isExist = true;
@@ -83,7 +84,11 @@ export class ButtonFloatService implements OnDestroy {
    * @param bgColor
    * @private
    */
-  private setButtonData(icon: string, isExist: boolean, bgColor?: string): Observable<boolean> {
+  private setButtonData(
+    icon: string,
+    isExist: boolean,
+    bgColor?: string
+  ): Observable<boolean> {
     this._cntFloatButton = this._componentFactoryResolver.resolveComponentFactory(
       ButtonFloatComponent
     );
@@ -99,10 +104,8 @@ export class ButtonFloatService implements OnDestroy {
       this._cntFloatButtonRef.instance.icon = icon;
       this._cntFloatButtonRef.instance.bgColor(bgColor);
       this._cntFloatButtonRef.instance.clickedEvent
-        .pipe(
-          takeUntil(this._unsubscribe)
-        )
-        .subscribe((res) => {
+        .pipe(takeUntil(this._unsubscribe))
+        .subscribe(res => {
           this.set(true);
         });
     });

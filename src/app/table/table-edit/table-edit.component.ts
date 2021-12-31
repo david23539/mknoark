@@ -1,7 +1,16 @@
-import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChild,} from '@angular/core';
-import {CustomColumnInterface} from '../interfaces/custom-column.interface';
-import {ItemSelectedInterface} from '../interfaces/item-selected.interface';
-import {LegendInterface} from '../interfaces/legend.interface';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  QueryList,
+  ViewChild,
+} from '@angular/core';
+import { CustomColumnInterface } from '../interfaces/custom-column.interface';
+import { ItemSelectedInterface } from '../interfaces/item-selected.interface';
+import { LegendInterface } from '../interfaces/legend.interface';
 
 @Component({
   selector: 'nk-table-edit',

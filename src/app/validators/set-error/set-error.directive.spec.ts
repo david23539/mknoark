@@ -1,4 +1,4 @@
-import {SetErrorDirective} from './set-error.directive';
+import { SetErrorDirective } from './set-error.directive';
 
 describe('SetErrorDirective', () => {
   it('should create an instance', () => {

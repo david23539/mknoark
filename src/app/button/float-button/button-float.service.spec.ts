@@ -1,7 +1,7 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
-import {ButtonFloatService} from './button-float.service';
+import { ButtonFloatService } from './button-float.service';
 import { ButtonFloatComponent } from './button-float/button-float.component';
 
 describe('ButtonFloatService', () => {
@@ -9,11 +9,11 @@ describe('ButtonFloatService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ButtonFloatComponent]
+      declarations: [ButtonFloatComponent],
     }).overrideModule(BrowserDynamicTestingModule, {
       set: {
-        entryComponents: [ ButtonFloatComponent ],
-      }
+        entryComponents: [ButtonFloatComponent],
+      },
     });
     service = TestBed.inject(ButtonFloatService);
   });
@@ -31,12 +31,12 @@ describe('ButtonFloatService', () => {
     (service as any)._cntFloatButtonRef = {
       instance: {
         clickedEvent: {
-          unsubscribe: () => ({})
-        }
-      }
+          unsubscribe: () => ({}),
+        },
+      },
     };
     (service as any)._appRef = {
-      detachView: () => ({})
+      detachView: () => ({}),
     };
     service.closeFloatButton();
   });
@@ -49,21 +49,23 @@ describe('ButtonFloatService', () => {
     (service as any)._cntFloatButtonRef = {
       instance: {
         clickedEvent: {
-          unsubscribe: () => ({})
-        }
+          unsubscribe: () => ({}),
+        },
       },
-      create: () => ({})
+      create: () => ({}),
     };
     (service as any)._appRef = {
       detachView: () => ({}),
       attachView: () => ({}),
-      components: [{
-        location: {
-          nativeElement: {
-            appendChild: () => ({})
-          }
-        }
-      }]
+      components: [
+        {
+          location: {
+            nativeElement: {
+              appendChild: () => ({}),
+            },
+          },
+        },
+      ],
     };
     (service as any).setButtonData('', true);
   });

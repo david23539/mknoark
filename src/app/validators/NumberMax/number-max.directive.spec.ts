@@ -1,4 +1,4 @@
-import {NumberMaxDirective} from './number-max.directive';
+import { NumberMaxDirective } from './number-max.directive';
 
 describe('NumberMaxDirective', () => {
   it('should create an instance', () => {

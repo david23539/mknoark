@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import { Injectable } from '@angular/core';
+import { globalConstant } from '../../utils/constant';
 
 @Injectable()
 export class CheckIosService {

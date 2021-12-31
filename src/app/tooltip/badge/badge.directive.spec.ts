@@ -1,74 +1,77 @@
-import {ElementRef, Renderer2, RendererStyleFlags2} from '@angular/core';
-import {BadgeDirective} from './badge.directive';
+import { ElementRef, Renderer2, RendererStyleFlags2 } from '@angular/core';
+import { BadgeDirective } from './badge.directive';
 
 class render2test extends Renderer2 {
-  addClass(el: any, name: string): void {
-  }
+  addClass(el: any, name: string): void {}
 
-  appendChild(parent: any, newChild: any): void {
-  }
+  appendChild(parent: any, newChild: any): void {}
 
-  createComment(value: string): any {
-  }
+  createComment(value: string): any {}
 
-  createElement(name: string, namespace?: string | null): any {
-  }
+  createElement(name: string, namespace?: string | null): any {}
 
-  createText(value: string): any {
-  }
+  createText(value: string): any {}
 
   get data(): { [p: string]: any } {
     return {};
   }
 
-  destroy(): void {
+  destroy(): void {}
+
+  insertBefore(
+    parent: any,
+    newChild: any,
+    refChild: any,
+    isMove?: boolean
+  ): void {}
+
+  listen(
+    target: any,
+    eventName: string,
+    callback: (event: any) => boolean | void
+  ): () => void {
+    return () => {};
   }
 
-  insertBefore(parent: any, newChild: any, refChild: any, isMove?: boolean): void {
-  }
+  nextSibling(node: any): any {}
 
-  listen(target: any, eventName: string, callback: (event: any) => (boolean | void)): () => void {
-    return () => {
-    };
-  }
+  parentNode(node: any): any {}
 
-  nextSibling(node: any): any {
-  }
+  removeAttribute(el: any, name: string, namespace?: string | null): void {}
 
-  parentNode(node: any): any {
-  }
+  removeChild(parent: any, oldChild: any, isHostElement?: boolean): void {}
 
-  removeAttribute(el: any, name: string, namespace?: string | null): void {
-  }
+  removeClass(el: any, name: string): void {}
 
-  removeChild(parent: any, oldChild: any, isHostElement?: boolean): void {
-  }
+  removeStyle(el: any, style: string, flags?: RendererStyleFlags2): void {}
 
-  removeClass(el: any, name: string): void {
-  }
+  selectRootElement(selectorOrNode: any, preserveContent?: boolean): any {}
 
-  removeStyle(el: any, style: string, flags?: RendererStyleFlags2): void {
-  }
+  setAttribute(
+    el: any,
+    name: string,
+    value: string,
+    namespace?: string | null
+  ): void {}
 
-  selectRootElement(selectorOrNode: any, preserveContent?: boolean): any {
-  }
+  setProperty(el: any, name: string, value: any): void {}
 
-  setAttribute(el: any, name: string, value: string, namespace?: string | null): void {
-  }
+  setStyle(
+    el: any,
+    style: string,
+    value: any,
+    flags?: RendererStyleFlags2
+  ): void {}
 
-  setProperty(el: any, name: string, value: any): void {
-  }
-
-  setStyle(el: any, style: string, value: any, flags?: RendererStyleFlags2): void {
-  }
-
-  setValue(node: any, value: string): void {
-  }
+  setValue(node: any, value: string): void {}
 }
 
 describe('BadgeDirective', () => {
   it('should create an instance', () => {
-    const directive = new BadgeDirective(new ElementRef<any>(this), new render2test());
+    const directive = new BadgeDirective(
+      new ElementRef<any>(this),
+      new render2test()
+    );
     expect(directive).toBeTruthy();
   });
 });

@@ -1,7 +1,7 @@
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {BannerModule} from '../banner/banner.module';
-import {BrowserIncompatibleComponent} from './browser-incompatible/browser-incompatible.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BannerModule } from '../banner/banner.module';
+import { BrowserIncompatibleComponent } from './browser-incompatible/browser-incompatible.component';
 
 @NgModule({
   declarations: [BrowserIncompatibleComponent],

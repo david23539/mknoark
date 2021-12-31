@@ -1,11 +1,17 @@
-import {NgModel} from '@angular/forms';
+import { NgModel } from '@angular/forms';
 
-import {Observable, of} from 'rxjs';
-import {map} from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-import {AsyncValidatorArray, message, validate, ValidationResult, ValidatorArray,} from './validate';
+import {
+  AsyncValidatorArray,
+  message,
+  validate,
+  ValidationResult,
+  ValidatorArray,
+} from './validate';
 
-import {ValueAccessorBase} from './value-accessor-base';
+import { ValueAccessorBase } from './value-accessor-base';
 
 export abstract class ElementBase<T> extends ValueAccessorBase<T> {
   protected abstract model: NgModel;
@@ -34,13 +40,12 @@ export abstract class ElementBase<T> extends ValueAccessorBase<T> {
   }
 
   get invalid(): Observable<boolean> {
-    return this.validate().pipe(
-      map(v => Object.keys(v || {}).length > 0)
-    );
+    return this.validate().pipe(map(v => Object.keys(v || {}).length > 0));
   }
 
   get failures(): Observable<Array<string>> {
     return this.validate().pipe(
-      map(v => Object.keys(v).map(k => message(v, k))));
+      map(v => Object.keys(v).map(k => message(v, k)))
+    );
   }
 }

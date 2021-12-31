@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {globalConstant} from '../../utils/constant';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { globalConstant } from '../../utils/constant';
 
-import {ButtonDefaultComponent} from './button-default.component';
+import { ButtonDefaultComponent } from './button-default.component';
 
 describe('ButtonDefaultComponent', () => {
   let component: ButtonDefaultComponent;

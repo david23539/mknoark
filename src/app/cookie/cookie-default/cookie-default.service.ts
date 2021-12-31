@@ -1,10 +1,15 @@
-import {ElementRef, Injectable, Renderer2, RendererFactory2,} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {CookiesService} from '../../service/cookies/cookies.service';
-import {globalConstant} from '../../utils/constant';
-import {Literal} from '../../utils/literal';
-import {CookieInterface} from '../cookie.interface';
-import {literalsCookie} from '../literals';
+import {
+  ElementRef,
+  Injectable,
+  Renderer2,
+  RendererFactory2,
+} from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { CookiesService } from '../../service/cookies/cookies.service';
+import { globalConstant } from '../../utils/constant';
+import { Literal } from '../../utils/literal';
+import { CookieInterface } from '../cookie.interface';
+import { literalsCookie } from '../literals';
 
 @Injectable()
 export class CookieDefaultService {

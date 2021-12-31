@@ -1,4 +1,4 @@
-import {ControlValueAccessor} from '@angular/forms';
+import { ControlValueAccessor } from '@angular/forms';
 
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
   public type: string;

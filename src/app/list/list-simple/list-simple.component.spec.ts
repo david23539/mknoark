@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {ListSimpleComponent} from './list-simple.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ListSimpleComponent } from './list-simple.component';
 
 describe('ListSimpleComponent', () => {
   let component: ListSimpleComponent;

@@ -1,11 +1,11 @@
-import {Directive, forwardRef, Input} from '@angular/core';
-import {AbstractControl, NG_VALIDATORS} from '@angular/forms';
-import {CookiesService} from '../../service/cookies/cookies.service';
-import {globalConstant} from '../../utils/constant';
-import {Literal} from '../../utils/literal';
-import {ErrorMessageInterface} from './interface/error-message.interface';
-import {ErrorMessageModel} from './model/ErrorMessage.model';
-import {typesDocument} from './types/types-document';
+import { Directive, forwardRef, Input } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
+import { CookiesService } from '../../service/cookies/cookies.service';
+import { globalConstant } from '../../utils/constant';
+import { Literal } from '../../utils/literal';
+import { ErrorMessageInterface } from './interface/error-message.interface';
+import { ErrorMessageModel } from './model/ErrorMessage.model';
+import { typesDocument } from './types/types-document';
 
 @Directive({
   selector: '[validateDocument][ngModel]',

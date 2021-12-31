@@ -1,7 +1,13 @@
-import {AbstractControl, AsyncValidatorFn, Validator, ValidatorFn, Validators,} from '@angular/forms';
-import {of} from 'rxjs';
-import {CookiesService} from '../service/cookies/cookies.service';
-import {Literal} from '../utils/literal';
+import {
+  AbstractControl,
+  AsyncValidatorFn,
+  Validator,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
+import { of } from 'rxjs';
+import { CookiesService } from '../service/cookies/cookies.service';
+import { Literal } from '../utils/literal';
 
 export interface ValidationResult {
   [validator: string]: string | boolean | any;
@@ -34,26 +40,26 @@ export const validate = (
   validators: ValidatorArray,
   asyncValidators: AsyncValidatorArray
 ) => (control: AbstractControl) => {
-    const synchronousValid = () => composeValidators(validators)(control);
+  const synchronousValid = () => composeValidators(validators)(control);
 
-    if (asyncValidators) {
-      const asyncValidator = composeValidators(asyncValidators);
+  if (asyncValidators) {
+    const asyncValidator = composeValidators(asyncValidators);
 
-      return asyncValidator(control).map(v => {
-        const secondary = synchronousValid();
-        if (secondary || v) {
-          // compose async and sync validator results
-          return Object.assign({}, secondary, v);
-        }
-      });
-    }
+    return asyncValidator(control).map(v => {
+      const secondary = synchronousValid();
+      if (secondary || v) {
+        // compose async and sync validator results
+        return Object.assign({}, secondary, v);
+      }
+    });
+  }
 
-    if (validators) {
-      return of(synchronousValid());
-    }
+  if (validators) {
+    return of(synchronousValid());
+  }
 
-    return of(null);
-  };
+  return of(null);
+};
 
 export const message = (validator: ValidationResult, key: string): string => {
   const minlength = validator.minlength;

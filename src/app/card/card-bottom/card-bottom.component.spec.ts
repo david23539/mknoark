@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {CardBottomComponent} from './card-bottom.component';
+import { CardBottomComponent } from './card-bottom.component';
 
 describe('CardBottomComponent', () => {
   let component: CardBottomComponent;

@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {BrowserIncompatibleComponent} from './browser-incompatible.component';
-import {BannerModule} from '../../banner/banner.module';
+import { BrowserIncompatibleComponent } from './browser-incompatible.component';
+import { BannerModule } from '../../banner/banner.module';
 
 describe('BrowserIncompatibleComponent', () => {
   let component: BrowserIncompatibleComponent;
@@ -11,7 +11,7 @@ describe('BrowserIncompatibleComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [BrowserIncompatibleComponent],
-        imports: [BannerModule]
+        imports: [BannerModule],
       }).compileComponents();
     })
   );
@@ -31,12 +31,14 @@ describe('BrowserIncompatibleComponent', () => {
   });
 
   it('method browserAvailable', () => {
-    component.browserAvailable = [{
-      icon: 'string',
-      colorIcon: 'string',
-      url: 'string',
-      textUrl: 'string',
-    }];
+    component.browserAvailable = [
+      {
+        icon: 'string',
+        colorIcon: 'string',
+        url: 'string',
+        textUrl: 'string',
+      },
+    ];
   });
 
   it('method redirectTo', () => {

@@ -1,8 +1,8 @@
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {ListModule} from '../../../list/list.module';
-import {SelectInterface} from '../select-interface';
-import {SelectLangComponent} from './select-lang.component';
+import { TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { ListModule } from '../../../list/list.module';
+import { SelectInterface } from '../select-interface';
+import { SelectLangComponent } from './select-lang.component';
 
 describe('SelectLangComponent', () => {
   beforeEach(

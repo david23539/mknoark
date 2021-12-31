@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Observable, Subject} from 'rxjs';
-import {globalConstant} from '../../utils/constant';
-import {StateFormInterface} from '../interface/state-form.interface';
-import {StateInFormInterface} from '../interface/state-in-form.interface';
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { globalConstant } from '../../utils/constant';
+import { StateFormInterface } from '../interface/state-form.interface';
+import { StateInFormInterface } from '../interface/state-in-form.interface';
 
 @Injectable({
   providedIn: 'root',

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ButtonFloatService} from './button/float-button/button-float.service';
-import {SpinnerLoaderService} from './spinner/spinner-loader/spinner-loader.service';
-import {SelectOptionInterface} from './msg-chat/select-option.interface';
+import { Component, OnInit } from '@angular/core';
+import { ButtonFloatService } from './button/float-button/button-float.service';
+import { SpinnerLoaderService } from './spinner/spinner-loader/spinner-loader.service';
+import { SelectOptionInterface } from './msg-chat/select-option.interface';
 
 @Component({
   selector: 'nk-root',
@@ -9,7 +9,6 @@ import {SelectOptionInterface} from './msg-chat/select-option.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
   public color: string;
   cont: number;
   data: any;
@@ -21,12 +20,12 @@ export class AppComponent implements OnInit {
     this.data = {};
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   show() {
-    this.buttonServiuce.showButtonFloat('icon-nk-plus' , this.color).subscribe(() => {
-    });
+    this.buttonServiuce
+      .showButtonFloat('icon-nk-plus', this.color)
+      .subscribe(() => {});
   }
 
   selectOption($event: SelectOptionInterface) {

@@ -1,12 +1,12 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {SelectOptionInterface} from '../select-option.interface';
-import {TypeActionType} from '../types/type-action.type';
-import {ListInterface} from '../../list/interfaces/list-interface';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SelectOptionInterface } from '../select-option.interface';
+import { TypeActionType } from '../types/type-action.type';
+import { ListInterface } from '../../list/interfaces/list-interface';
 
 @Component({
   selector: 'nk-msg-chat',
   templateUrl: './msg-chat.component.html',
-  styleUrls: ['./msg-chat.component.scss']
+  styleUrls: ['./msg-chat.component.scss'],
 })
 export class MsgChatComponent implements OnInit {
   @Input() msgEnter: boolean;
@@ -14,10 +14,12 @@ export class MsgChatComponent implements OnInit {
   @Input() time: string;
   @Input() status: number;
   @Input() author: string;
-  @Output() selectOption: EventEmitter<SelectOptionInterface> = new EventEmitter<SelectOptionInterface>();
+  @Output() selectOption: EventEmitter<
+    SelectOptionInterface
+  > = new EventEmitter<SelectOptionInterface>();
   @Input() index: number;
   public showSubmenu: boolean;
-  public dataOptions:  ListInterface[];
+  public dataOptions: ListInterface[];
 
   constructor() {
     this.msgEnter = false;
@@ -37,21 +39,20 @@ export class MsgChatComponent implements OnInit {
     if (action === 'C') {
       try {
         if (navigator.clipboard) {
-          navigator.clipboard.writeText(this.text)
-            .then(() => {
-              console.log('texto copiado', this.text);
-            });
+          navigator.clipboard.writeText(this.text).then(() => {
+            console.log('texto copiado', this.text);
+          });
         }
       } catch (e) {
         throw new Error(e);
       }
     } else {
-      this.selectOption.emit( {
+      this.selectOption.emit({
         action,
         author: this.author,
         text: this.text,
         time: this.time,
-        index: this.index
+        index: this.index,
       });
     }
   }
@@ -61,27 +62,27 @@ export class MsgChatComponent implements OnInit {
       this.dataOptions = [
         {
           text: 'Eliminar___',
-          value: 'D'
+          value: 'D',
         },
         {
           text: 'Editar___',
-          value: 'U'
+          value: 'U',
         },
         {
           text: 'Copiar___',
-          value: 'C'
-        }
+          value: 'C',
+        },
       ];
     } else {
       this.dataOptions = [
         {
           text: 'Copiar___',
-          value: 'C'
+          value: 'C',
         },
         {
           text: 'Responder___',
-          value: 'R'
-        }
+          value: 'R',
+        },
       ];
     }
   }

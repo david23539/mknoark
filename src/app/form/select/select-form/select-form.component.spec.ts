@@ -1,8 +1,8 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {ListModule} from '../../../list/list.module';
-import {ValidationFormModule} from '../../validation-form/validation-form.module';
-import {SelectFormComponent} from './select-form.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { ListModule } from '../../../list/list.module';
+import { ValidationFormModule } from '../../validation-form/validation-form.module';
+import { SelectFormComponent } from './select-form.component';
 
 describe('SelectFormComponent', () => {
   let component: SelectFormComponent;

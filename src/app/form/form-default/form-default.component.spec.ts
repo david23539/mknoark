@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {ButtonModule} from '../../button/button.module';
-import {FormDefaultComponent} from './form-default.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from '../../button/button.module';
+import { FormDefaultComponent } from './form-default.component';
 
 describe('FormDefaultComponent', () => {
   let component: FormDefaultComponent;

@@ -1,4 +1,4 @@
-import {NgModel} from '@angular/forms';
+import { NgModel } from '@angular/forms';
 
 export interface StateFormInterface {
   state: boolean;

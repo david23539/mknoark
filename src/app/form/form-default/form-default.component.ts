@@ -10,12 +10,12 @@ import {
   QueryList,
   ViewChild,
 } from '@angular/core';
-import {NgForm, NgModel} from '@angular/forms';
-import {Subject} from 'rxjs';
-import {delay, filter, takeUntil} from 'rxjs/operators';
-import {globalConstant} from '../../utils/constant';
-import {StateFormInterface} from '../interface/state-form.interface';
-import {ValidationControlService} from '../service/validation-control.service';
+import { NgForm, NgModel } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { delay, filter, takeUntil } from 'rxjs/operators';
+import { globalConstant } from '../../utils/constant';
+import { StateFormInterface } from '../interface/state-form.interface';
+import { ValidationControlService } from '../service/validation-control.service';
 
 @Component({
   selector: 'nk-form-default',
@@ -78,7 +78,7 @@ export class FormDefaultComponent implements AfterViewInit, OnDestroy {
   sendData(data: any): void {
     if (this.form.valid) {
       this.send.emit({
-        data
+        data,
       });
     }
   }

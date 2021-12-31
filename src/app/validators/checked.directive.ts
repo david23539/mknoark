@@ -1,7 +1,7 @@
-import {Directive, forwardRef} from '@angular/core';
-import {AbstractControl, NG_VALIDATORS} from '@angular/forms';
-import {CookiesService} from '../service/cookies/cookies.service';
-import {Literal} from '../utils/literal';
+import { Directive, forwardRef } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
+import { CookiesService } from '../service/cookies/cookies.service';
+import { Literal } from '../utils/literal';
 
 @Directive({
   selector: '[validateTrue][ngModel]',

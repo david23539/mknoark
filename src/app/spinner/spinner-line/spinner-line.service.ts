@@ -1,5 +1,10 @@
-import {ElementRef, Injectable, Renderer2, RendererFactory2,} from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import {
+  ElementRef,
+  Injectable,
+  Renderer2,
+  RendererFactory2,
+} from '@angular/core';
+import { globalConstant } from '../../utils/constant';
 
 @Injectable({
   providedIn: 'root',

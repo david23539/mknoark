@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {TableEditComponent} from './table-edit.component';
+import { TableEditComponent } from './table-edit.component';
 
 describe('TableEditComponent', () => {
   let component: TableEditComponent;
@@ -8,9 +8,8 @@ describe('TableEditComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableEditComponent ]
-    })
-    .compileComponents();
+      declarations: [TableEditComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

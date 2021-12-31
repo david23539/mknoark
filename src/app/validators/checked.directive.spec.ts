@@ -1,4 +1,4 @@
-import {CheckedDirective} from './checked.directive';
+import { CheckedDirective } from './checked.directive';
 
 describe('CheckedDirective', () => {
   let directive;

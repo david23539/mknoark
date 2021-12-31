@@ -1,8 +1,8 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ButtonModule} from '../../button/button.module';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from '../../button/button.module';
 
-import {ModalDefaultComponent} from './modal-default.component';
+import { ModalDefaultComponent } from './modal-default.component';
 
 describe('ModalDefaultComponent', () => {
   let component: ModalDefaultComponent;

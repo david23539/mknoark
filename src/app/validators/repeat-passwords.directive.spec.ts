@@ -1,4 +1,4 @@
-import {RepeatTextDirective} from './repeat-text.directive';
+import { RepeatTextDirective } from './repeat-text.directive';
 // import {AbstractControl} from '@angular/forms';
 
 describe('RepeatTextDirective', () => {

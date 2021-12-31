@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NavSliderInterface} from '../interfaces/nav-slider-interface';
+import { Component, Input } from '@angular/core';
+import { NavSliderInterface } from '../interfaces/nav-slider-interface';
 
 @Component({
   selector: 'nk-nav-slider',

@@ -8,8 +8,8 @@ import {
   Renderer2,
   ViewChildren,
 } from '@angular/core';
-import {globalConstant} from '../../utils/constant';
-import {ListInterface} from '../interfaces/list-interface';
+import { globalConstant } from '../../utils/constant';
+import { ListInterface } from '../interfaces/list-interface';
 
 @Component({
   selector: 'nk-list',

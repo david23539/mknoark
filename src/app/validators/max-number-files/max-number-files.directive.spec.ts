@@ -1,4 +1,4 @@
-import {MaxNumberFilesDirective} from './max-number-files.directive';
+import { MaxNumberFilesDirective } from './max-number-files.directive';
 
 describe('MaxNumberFilesDirective', () => {
   it('should create an instance', () => {

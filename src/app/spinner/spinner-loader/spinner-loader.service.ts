@@ -7,8 +7,8 @@ import {
   Injectable,
   Injector,
 } from '@angular/core';
-import {timer} from 'rxjs';
-import {SpinnerLoaderComponent} from './spinner-loader/spinner-loader.component';
+import { timer } from 'rxjs';
+import { SpinnerLoaderComponent } from './spinner-loader/spinner-loader.component';
 
 @Injectable({
   providedIn: 'root',

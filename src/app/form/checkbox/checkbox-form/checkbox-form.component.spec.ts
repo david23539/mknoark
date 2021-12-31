@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {ValidationFormModule} from '../../validation-form/validation-form.module';
-import {CheckboxFormComponent} from './checkbox-form.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { ValidationFormModule } from '../../validation-form/validation-form.module';
+import { CheckboxFormComponent } from './checkbox-form.component';
 
 describe('CheckboxFormComponent', () => {
   let component: CheckboxFormComponent;

@@ -1,4 +1,4 @@
-import {ValueAccessorBase} from './value-accessor-base';
+import { ValueAccessorBase } from './value-accessor-base';
 
 class ValueAccessorBaseTest extends ValueAccessorBase<string> {
   constructor() {

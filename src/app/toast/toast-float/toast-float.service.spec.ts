@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {ToastFloatService} from './toast-float.service';
+import { ToastFloatService } from './toast-float.service';
 
 describe('ToastFloatService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

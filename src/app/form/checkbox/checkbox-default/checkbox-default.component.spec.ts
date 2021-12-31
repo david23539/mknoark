@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
-import {CheckboxDefaultComponent} from './checkbox-default.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { CheckboxDefaultComponent } from './checkbox-default.component';
 
 describe('CheckboxDefaultComponent', () => {
   let component: CheckboxDefaultComponent;

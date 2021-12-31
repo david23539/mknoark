@@ -1,11 +1,24 @@
-import {Component, ElementRef, Inject, Input, OnInit, Optional, ViewChild,} from '@angular/core';
-import {NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgModel,} from '@angular/forms';
-import {filter} from 'rxjs/operators';
-import {CookiesService} from '../../../service/cookies/cookies.service';
-import {globalConstant} from '../../../utils/constant';
-import {ElementBase} from '../../element-base';
-import {StateInFormInterface} from '../../interface/state-in-form.interface';
-import {ValidationControlService} from '../../service/validation-control.service';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  Input,
+  OnInit,
+  Optional,
+  ViewChild,
+} from '@angular/core';
+import {
+  NG_ASYNC_VALIDATORS,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  NgModel,
+} from '@angular/forms';
+import { filter } from 'rxjs/operators';
+import { CookiesService } from '../../../service/cookies/cookies.service';
+import { globalConstant } from '../../../utils/constant';
+import { ElementBase } from '../../element-base';
+import { StateInFormInterface } from '../../interface/state-in-form.interface';
+import { ValidationControlService } from '../../service/validation-control.service';
 
 let identifier = 0;
 @Component({

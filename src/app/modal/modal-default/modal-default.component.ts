@@ -10,9 +10,9 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import {timer} from 'rxjs';
-import {animationModal} from '../animationModal';
-import {ModalComponentInterface} from './modalComponent.interface';
+import { timer } from 'rxjs';
+import { animationModal } from '../animationModal';
+import { ModalComponentInterface } from './modalComponent.interface';
 
 @Component({
   selector: 'nk-modal-default',

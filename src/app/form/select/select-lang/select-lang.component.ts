@@ -8,9 +8,9 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import {CookiesService} from '../../../service/cookies/cookies.service';
-import {globalConstant} from '../../../utils/constant';
-import {SelectInterface} from '../select-interface';
+import { CookiesService } from '../../../service/cookies/cookies.service';
+import { globalConstant } from '../../../utils/constant';
+import { SelectInterface } from '../select-interface';
 
 @Component({
   selector: 'nk-select-lang',
@@ -73,7 +73,7 @@ export class SelectLangComponent implements OnInit {
   }
 
   private _validateSelect(value: string) {
-    const result = this.data.find(x => x.value === value );
+    const result = this.data.find(x => x.value === value);
     if (result) {
       this.selectItem(result);
     } else {

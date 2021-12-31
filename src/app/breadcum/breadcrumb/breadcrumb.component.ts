@@ -13,7 +13,7 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import { globalConstant } from '../../utils/constant';
 
 @Component({
   selector: 'nk-breadcrumb-default',

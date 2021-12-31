@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {ValidationMessageComponent} from './validation-message.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ValidationMessageComponent } from './validation-message.component';
 
 describe('ValidationMessageComponent', () => {
   let component: ValidationMessageComponent;

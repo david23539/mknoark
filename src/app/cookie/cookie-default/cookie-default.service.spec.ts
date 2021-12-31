@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {CookieDefaultService} from './cookie-default.service';
+import { CookieDefaultService } from './cookie-default.service';
 
 describe('CookieDefaultService', () => {
   let service: CookieDefaultService;
@@ -14,8 +14,12 @@ describe('CookieDefaultService', () => {
   beforeEach(() => {
     let storeMock = {};
 
-    jest.spyOn(localStorage, 'getItem').mockImplementation(key => storeMock[key]);
-    jest.spyOn(localStorage, 'setItem').mockImplementation((key, value) => storeMock[key] = value);
+    jest
+      .spyOn(localStorage, 'getItem')
+      .mockImplementation(key => storeMock[key]);
+    jest
+      .spyOn(localStorage, 'setItem')
+      .mockImplementation((key, value) => (storeMock[key] = value));
     jest.spyOn(localStorage, 'removeItem').mockImplementation(() => {
       storeMock = {};
     });

@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {globalConstant} from '../../../utils/constant';
+import { Component, Input, OnInit } from '@angular/core';
+import { globalConstant } from '../../../utils/constant';
 
 @Component({
   selector: 'nk-spinner-loader',

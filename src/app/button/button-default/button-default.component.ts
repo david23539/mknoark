@@ -7,7 +7,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import {globalConstant} from '../../utils/constant';
+import { globalConstant } from '../../utils/constant';
 
 @Component({
   selector: 'nk-button-default',

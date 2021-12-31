@@ -7,8 +7,8 @@ import {
   QueryList,
   ViewChild,
 } from '@angular/core';
-import {CustomColumnInterface} from '../interfaces/custom-column.interface';
-import {LegendInterface} from '../interfaces/legend.interface';
+import { CustomColumnInterface } from '../interfaces/custom-column.interface';
+import { LegendInterface } from '../interfaces/legend.interface';
 
 @Component({
   selector: 'nk-table-default',

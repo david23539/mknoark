@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {environment} from '../../../environments/environment';
-import {globalConstant} from '../../utils/constant';
+import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
+import { globalConstant } from '../../utils/constant';
 
 @Injectable()
 export class CookiesService {

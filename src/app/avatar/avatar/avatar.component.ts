@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {StatusType} from '../statusType';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { StatusType } from '../statusType';
 
 @Component({
   selector: 'nk-avatar',
   templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.scss']
+  styleUrls: ['./avatar.component.scss'],
 })
 export class AvatarComponent implements OnInit {
   @Input() initials: string;
@@ -20,13 +20,12 @@ export class AvatarComponent implements OnInit {
     this.weight = 40;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   /**
    * @description send an event with the data shown
    */
   public sendDataSelected() {
-    this.selected.emit( this.urlImg || this.initials);
+    this.selected.emit(this.urlImg || this.initials);
   }
 }

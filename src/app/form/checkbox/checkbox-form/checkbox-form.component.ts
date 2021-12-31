@@ -1,6 +1,11 @@
-import {Component, Inject, Input, Optional, ViewChild} from '@angular/core';
-import {NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgModel,} from '@angular/forms';
-import {ElementBase} from '../../element-base';
+import { Component, Inject, Input, Optional, ViewChild } from '@angular/core';
+import {
+  NG_ASYNC_VALIDATORS,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  NgModel,
+} from '@angular/forms';
+import { ElementBase } from '../../element-base';
 
 @Component({
   selector: 'nk-checkbox-form',

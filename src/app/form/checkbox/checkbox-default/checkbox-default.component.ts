@@ -1,6 +1,10 @@
-import {Component, forwardRef, Input, ViewChild} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR, NgModel,} from '@angular/forms';
-import {ValueAccessorBase} from '../../value-accessor-base';
+import { Component, forwardRef, Input, ViewChild } from '@angular/core';
+import {
+  ControlValueAccessor,
+  NG_VALUE_ACCESSOR,
+  NgModel,
+} from '@angular/forms';
+import { ValueAccessorBase } from '../../value-accessor-base';
 
 @Component({
   selector: 'nk-checkbox-default',
