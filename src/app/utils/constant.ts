@@ -34,7 +34,7 @@ export const globalConstant = {
     EMPTY_STRING: '',
     FALSE: false,
     LANG_DEFAULT: 'es',
-    VERSION: environment.version,
+    VERSION: '1.0.0',
     BLANK: '_blank',
   },
   EVENTS: {
