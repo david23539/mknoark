@@ -1,0 +1,1 @@
+{"ast":null,"code":"const packageVersion = require('../../package.json');\n\nexport const environment = {\n  production: true,\n  version: packageVersion.version\n};","map":null,"metadata":{},"sourceType":"module"}
