@@ -72,6 +72,7 @@ node_modules
 /dist/MkNoark/vendor-es2015.js.map
 /documentation/
 /dist/
+/.angular/*
 /.idea/*
 /MkNoark.iml
 /.idea/

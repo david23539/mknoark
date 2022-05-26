@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { animate, style, transition, trigger } from '@angular/animations';\nexport const animationModal = trigger('loadModal', [transition(':enter', [style({\n  top: '100vh'\n}), animate('250ms')])]);","map":null,"metadata":{},"sourceType":"module"}
