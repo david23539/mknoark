@@ -30,9 +30,12 @@ export class CookiesService {
       if (matchValue) {
         return matchValue.trim().substr(lengthCookie, matchValue.length);
       } else {
-        return '';
+        console.warn('No selected lang. View documentation under selector lang');
+        return 'en';
       }
     }
-    return '';
+    console.warn('No selected lang. View documentation under selector lang');
+    return 'en';
+
   }
 }

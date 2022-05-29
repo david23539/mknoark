@@ -12,7 +12,6 @@ export class NavBarDefaultComponent implements OnInit {
   @Input() noFixed: boolean;
   @Output() statusMenu = new EventEmitter();
 
-  public version: string;
   private _deployMenu = false;
   @Input() set stateMenu(value: boolean) {
     this._deployMenu = value;
@@ -29,6 +28,5 @@ export class NavBarDefaultComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.version = globalConstant.GENERAL.VERSION;
   }
 }
