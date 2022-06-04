@@ -27,6 +27,5 @@ export class NavBarDefaultComponent implements OnInit {
     return false;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
