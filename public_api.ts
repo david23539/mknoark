@@ -61,4 +61,5 @@ export * from './src/app/avatar/avatar/avatar.component';
 export * from './src/app/button/float-button/button-float.service';
 export * from './src/app/msg-chat/msg-chat.module';
 export * from './src/app/msg-chat/msg-chat/msg-chat.component';
+export * from './src/app/change-color/change-color.service';
 
