@@ -25,6 +25,14 @@
     "copy-images": "cp -R \"./src/assets/images\" \"./dist/images\"",
     "doc": "npx compodoc -p tsconfig.json --language es-ES --disableCoverage"
   },
+  "funding": {
+    "type" : "patreon",
+    "url" : "https://www.patreon.com/david23539"
+  },
+  "bugs": {
+    "email": "david23539@gmail.com",
+    "url": "https://github.com/david23539/mknoark/issues"
+  },
   "private": false,
   "dependencies": {
     "@angular/animations": "~13.3.10",
