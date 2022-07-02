@@ -20,6 +20,7 @@ import { TableModule } from './table/table.module';
 import { TooltipModule } from './tooltip/tooltip.module';
 import { ValidatorsModule } from './validators/validators.module';
 import { MsgChatModule } from './msg-chat/msg-chat.module';
+import { ChangeColorService } from "./change-color/change-color.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -53,7 +54,7 @@ import { MsgChatModule } from './msg-chat/msg-chat.module';
     InputModule,
     ListModule,
   ],
-  providers: [CookieDefaultService, ModalServiceDefaultService],
+  providers: [CookieDefaultService, ModalServiceDefaultService, ChangeColorService],
   bootstrap: [AppComponent],
 })
 // @ts-ignore
