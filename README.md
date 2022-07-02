@@ -36,13 +36,13 @@ Icons built into the components themselves are also provided, but they can be us
 
 ----------------------------
 
-###Documentation
+### Documentation
 In the following url you will find the documentation of use of all the components.
 Work continues to improve the documentation:
 
 [Go to documentation](https://david23539.github.io/doc-mk-noark/)
 
-###Thanks
+### Thanks
 
 - grid : 
   - documentation: [documentation on which I base myself](https://www.toptal.com/sass/css3-flexbox-sass-grid-tutorial)
@@ -51,3 +51,6 @@ Work continues to improve the documentation:
   - documentation: [url](https://rangle.io/blog/angular-2-ngmodel-and-custom-form-components/)
   - author: [Christopher Bond](https://rangle.io/blog/author/christopher-bond)
 - Icons: [icoomon](https://icomoon.io/)
+
+### Notes
+The version 2.0.0 supports angular 14 but version 1.1.0 (Angular 13.X.X) is not deprecated and has all the components as the latest version
