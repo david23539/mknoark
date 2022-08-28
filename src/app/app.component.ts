@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
   public color: string;
   cont: number;
   data: any;
+  rememberEmail: any;
+  email: any;
   constructor(
     private _spinnerLoader: SpinnerLoaderService,
     private buttonServiuce: ButtonFloatService,

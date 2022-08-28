@@ -17,11 +17,11 @@ export class CardBottomComponent implements OnInit {
   @Input() footer: boolean;
   @Input() scroll: boolean;
   @Input() height: number;
-  public isIos: boolean;
 
-  constructor(private _checkIosService: CheckIosService) {}
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.isIos = this._checkIosService.checkIos();
+
   }
 }

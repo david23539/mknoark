@@ -23,6 +23,9 @@ export class BadgeDirective {
       if (badges < 100) {
         const text = this._render.createText(badges.toString());
         this._render.appendChild(cntText, text);
+      } else if(badges >= 100) {
+        const text = this._render.createText('+99');
+        this._render.appendChild(cntText, text);
       }
       this._render.appendChild(this._cntBadge, cntText);
       this._render.appendChild(this._el?.nativeElement, this._cntBadge);
