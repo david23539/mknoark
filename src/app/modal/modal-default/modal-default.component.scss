@@ -79,9 +79,7 @@
 
     .body-mdl {
       color: $grey-800;
-      display: flex;
-      flex: 1 0 auto;
-      max-height: 65vh;
+      max-height: 55vh;
       overflow: auto;
       padding: 28px;
       width: 100%;
@@ -95,6 +93,7 @@
     }
 
     .footer-mdl {
+
       display: flex;
       justify-content: flex-end;
       padding: 28px;
