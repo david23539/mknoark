@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { globalConstant } from '../../utils/constant';
-import { StateFormInterface } from '../interface/state-form.interface';
-import { StateInFormInterface } from '../interface/state-in-form.interface';
+import {Injectable} from '@angular/core';
+import {Observable, Subject} from 'rxjs';
+import {globalConstant} from '../../utils/constant';
+import {StateFormInterface} from '../interface/state-form.interface';
+import {StateInFormInterface} from '../interface/state-in-form.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -19,17 +19,20 @@ export class ValidationControlService {
 
   public set(data: StateInFormInterface): void {
     if (globalConstant.FORM_VALIDATION.VALID === data.status) {
-      const states: StateFormInterface = {
+      this._state = {
         state: true,
         model: data.model,
       };
-      this._state = states;
+    } else if(data.status === 'null') {
+      this._state = {
+        state: 'null',
+        model: data.model,
+      };
     } else {
-      const states: StateFormInterface = {
+      this._state = {
         state: false,
         model: data.model,
       };
-      this._state = states;
     }
     this.$invalidFormElement.next(this.get());
   }

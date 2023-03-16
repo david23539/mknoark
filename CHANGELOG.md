@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2023-03-17
+### BUGFIX
+- Remove control of form
+
 ## [2.0.2] - 2022-08-28
 ### FIX
 - Added +99 to nkBudget when over 100
@@ -17,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2022-04-06
 ### FEATURE
 - Service ChangeColorService is created
- 
+- 
 ## [1.0.1] - 2022-29-05
 ### FIX
 - Fix language default and remove version of navbar

@@ -2,7 +2,7 @@ import {
   Component,
   ElementRef,
   Inject,
-  Input,
+  Input, OnDestroy,
   OnInit,
   Optional,
   ViewChild,
@@ -34,7 +34,7 @@ let identifier = 0;
     CookiesService,
   ],
 })
-export class InputFormComponent extends ElementBase<string> implements OnInit {
+export class InputFormComponent extends ElementBase<string> implements OnInit, OnDestroy {
   @ViewChild('textLabel') textLabel: ElementRef;
   @Input() public label: string;
   @Input() public type: string;
@@ -72,5 +72,13 @@ export class InputFormComponent extends ElementBase<string> implements OnInit {
         };
         this._validationService.set(states);
       });
+  }
+
+  ngOnDestroy(): void {
+    const states: StateInFormInterface = {
+      status: 'null',
+      model: this.model,
+    };
+    this._validationService.set(states);
   }
 }

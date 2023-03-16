@@ -4,7 +4,7 @@ import {
   DoCheck,
   ElementRef,
   Inject,
-  Input,
+  Input, OnDestroy,
   Optional,
   ViewChild,
 } from '@angular/core';
@@ -17,6 +17,8 @@ import {
 import { globalConstant } from '../../../utils/constant';
 import { ElementBase } from '../../element-base';
 import { SelectInterface } from '../select-interface';
+import {StateInFormInterface} from '../../interface/state-in-form.interface';
+import {ValidationControlService} from '../../service/validation-control.service';
 
 @Component({
   selector: 'nk-select-form',
@@ -31,7 +33,7 @@ import { SelectInterface } from '../select-interface';
   ],
 })
 export class SelectFormComponent extends ElementBase<string>
-  implements DoCheck {
+  implements DoCheck, OnDestroy {
   @ViewChild(NgModel) model: NgModel;
   @ViewChild('textLabel') textLabel: ElementRef;
   @ViewChild('inputTextForm') inputText: ElementRef;
@@ -52,12 +54,22 @@ export class SelectFormComponent extends ElementBase<string>
   constructor(
     @Optional() @Inject(NG_VALIDATORS) validators: Array<any>,
     @Optional() @Inject(NG_ASYNC_VALIDATORS) asyncValidators: Array<any>,
+    private _validationService: ValidationControlService,
+
     private _cdr: ChangeDetectorRef
   ) {
     super(validators, asyncValidators);
     this.showList = false;
     this.labelText = '';
     this.reverseList = false;
+  }
+
+  ngOnDestroy(): void {
+    const states: StateInFormInterface = {
+      status: 'null',
+      model: this.model,
+    };
+    this._validationService.set(states);
   }
 
   ngDoCheck(): void {
@@ -122,4 +134,6 @@ export class SelectFormComponent extends ElementBase<string>
       this.valueSelected = null;
     }
   }
+
+
 }
