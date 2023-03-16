@@ -70,7 +70,11 @@ export class FormDefaultComponent implements AfterViewInit, OnDestroy {
         takeUntil(this._destroy$)
       )
       .subscribe(validation => {
-        this.form.form.get(validation.model.name)?.updateValueAndValidity();
+        if(validation.state === 'null') {
+          this.form.form.removeControl(validation.model.name);
+        } else {
+          this.form.form.get(validation.model.name)?.updateValueAndValidity();
+        }
         this._cdr.detectChanges();
       });
   }
