@@ -1,0 +1,16 @@
+<div class="cnt-input-switch-form">
+  <input
+    type="checkbox"
+    [(ngModel)]="value"
+    required
+    [name]="name"
+    [ngClass]="{invalid: (invalid | async)}"
+  >
+  <span class="check"></span>
+  <nk-validation-message
+    *ngIf="invalid | async"
+    [messages]="failures | async"
+  >
+  </nk-validation-message>
+</div>
+{{value | json}}

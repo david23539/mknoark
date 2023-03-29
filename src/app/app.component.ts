@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   dataSelect: any[];
   showSecond = false;
   modelH = 'H';
+  dataShitch = null;
   constructor(
     private _spinnerLoader: SpinnerLoaderService,
     private buttonServiuce: ButtonFloatService,
