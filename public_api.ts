@@ -16,6 +16,7 @@ export * from './src/app/form/form-default/form-default.component';
 export * from './src/app/form/input/input.module';
 export * from './src/app/form/input/input-default/input-default.component';
 export * from './src/app/form/input/input-form/input-form.component';
+export * from './src/app/form/input/input-switch-form/input-switch-form.component';
 export * from './src/app/form/input/input-file-form/input-file-form.component';
 export * from './src/app/form/checkbox/checkbox.module';
 export * from './src/app/form/checkbox/checkbox-form/checkbox-form.component';
