@@ -1,24 +1,30 @@
-<nk-form-default>
-  <div class="container__col-12">
-    <nk-input-form
-      [label]="'labelEmailFirst'"
-      [name]="'nameField'"
-      [type]="'email'"
-      [nkBadge]="900"
-      [(ngModel)]="email"
-      required
-    ></nk-input-form>
-  </div>
+<div class="container">
+  <div class="container__row">
+    <div class="container__col-12">
+      <nk-card-default>
+        <h1 header>
+          ESTO ES EL TITULO
+        </h1>
+        <div body>
+          <nk-form-default
+            (send)="test($event)"
+          >
+            <div class="container__row">
 
-  <div class="container__col-12">
-    <nk-input-form
-      [label]="'labelEmailLast'"
-      [name]="'nameFieldLast'"
-      [type]="'email'"
-      [(ngModel)]="rememberEmail"
-      required
-      [validateEqual]="email"
-    ></nk-input-form>
-  </div>
+              <div class="container__col-6">
+                <nk-select-form [(ngModel)]="dataSelect[0].value" [data]="dataSelect" [label]="'campo 2'"  [name]="'campo2'"></nk-select-form>
+              </div>
 
-</nk-form-default>
+              <div class="container__col-6" *ngIf="showSecond">
+                <nk-select-form [(ngModel)]="modelH" [data]="dataSelect" [label]="'campo 3'"  [name]="'campo3'"></nk-select-form>
+<!--                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>-->
+              </div>
+            </div>
+          </nk-form-default>
+        </div>
+      </nk-card-default>
+    </div>
+    <button (click)="showSecond = !showSecond">ADD/REMOVE</button>
+  </div>
+</div>
+
