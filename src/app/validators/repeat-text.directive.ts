@@ -25,10 +25,10 @@ export class RepeatTextDirective {
         const value = control.value;
         if (value && value !== this.validateEqual) {
           control.setErrors({
-            equal: Literal[CookiesService.getCookie('lang')].NO_MATCH_PASSWORD,
+            equal: Literal[CookiesService.getCookie('lang')].NO_MATCH_TEXT,
           });
           return {
-            equal: Literal[CookiesService.getCookie('lang')].NO_MATCH_PASSWORD,
+            equal: Literal[CookiesService.getCookie('lang')].NO_MATCH_TEXT,
           };
         } else if (control.hasError('equal')) {
           control.setErrors({ equal: null });

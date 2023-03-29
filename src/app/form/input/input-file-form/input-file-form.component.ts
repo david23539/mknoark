@@ -2,7 +2,7 @@ import {
   Component,
   ElementRef,
   Inject,
-  Input,
+  Input, OnDestroy,
   OnInit,
   Optional,
   ViewChild,
@@ -18,6 +18,7 @@ import { globalConstant } from '../../../utils/constant';
 import { Literal } from '../../../utils/literal';
 import { ElementBase } from '../../element-base';
 import { ValidationControlService } from '../../service/validation-control.service';
+import {StateInFormInterface} from '../../interface/state-in-form.interface';
 
 @Component({
   selector: 'nk-input-file-form',
@@ -31,7 +32,7 @@ import { ValidationControlService } from '../../service/validation-control.servi
     },
   ],
 })
-export class InputFileFormComponent extends ElementBase<any> implements OnInit {
+export class InputFileFormComponent extends ElementBase<any> implements OnInit, OnDestroy {
   @ViewChild(NgModel, { static: true }) model: NgModel;
   @ViewChild('textLabel') textLabel: ElementRef;
   @Input() accept: string;
@@ -67,5 +68,12 @@ export class InputFileFormComponent extends ElementBase<any> implements OnInit {
         this.label = fileInput?.target?.files[0]?.name;
       }
     }
+  }
+  ngOnDestroy(): void {
+    const states: StateInFormInterface = {
+      status: 'null',
+      model: this.model,
+    };
+    this._validationService.set(states);
   }
 }
