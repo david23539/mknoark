@@ -15,6 +15,18 @@
                 <nk-select-form [(ngModel)]="dataSelect[0].value" [data]="dataSelect" [label]="'campo 2'"  [name]="'campo2'"></nk-select-form>
               </div>
 
+              <div class="container__col-6">
+                <nk-input-switch-form  [(ngModel)]="dataShitch" required  [name]="'campo4'"></nk-input-switch-form>
+                <!--<nk-checkbox-form
+                  [label]="'nk-checkbox-form'"
+                  [(ngModel)]="dataShitch"
+                  name="checkbox"
+                  validateTrue
+                >
+
+                </nk-checkbox-form>-->
+              </div>
+
               <div class="container__col-6" *ngIf="showSecond">
                 <nk-select-form [(ngModel)]="modelH" [data]="dataSelect" [label]="'campo 3'"  [name]="'campo3'"></nk-select-form>
 <!--                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>-->

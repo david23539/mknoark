@@ -1,0 +1,37 @@
+@import "../../../../assets/base/colors";
+.cnt-input-switch-form {
+  input[type="checkbox"] {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    opacity: 0;
+    &:checked + .check{
+      background: $primary;
+      &:after {
+        left: initial;
+        right: 3px;
+      }
+    }
+  }
+  .check {
+    pointer-events: none;
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: $gray-color;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      background: white;
+      width: 14px;
+      height: 14px;
+      border-radius: 14px;
+    }
+  }
+}
