@@ -6,17 +6,25 @@
           ESTO ES EL TITULO
         </h1>
         <div body>
-          <nk-form-default>
+          <nk-form-default
+            (send)="test($event)"
+          >
             <div class="container__row">
+
               <div class="container__col-6">
-                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>
+                <nk-select-form [(ngModel)]="dataSelect[0].value" [data]="dataSelect" [label]="'campo 2'"  [name]="'campo2'"></nk-select-form>
+              </div>
+
+              <div class="container__col-6" *ngIf="showSecond">
+                <nk-select-form [(ngModel)]="modelH" [data]="dataSelect" [label]="'campo 3'"  [name]="'campo3'"></nk-select-form>
+<!--                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>-->
               </div>
             </div>
           </nk-form-default>
         </div>
       </nk-card-default>
     </div>
+    <button (click)="showSecond = !showSecond">ADD/REMOVE</button>
   </div>
 </div>
 
-<nk-navbar-default  [noFixed]="true" [title]="'esto es una prueba'"> </nk-navbar-default>

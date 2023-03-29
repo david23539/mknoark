@@ -8,6 +8,7 @@ import {
   Optional,
   ViewChild,
 } from '@angular/core';
+import {filter} from 'rxjs/operators';
 import {
   NG_ASYNC_VALIDATORS,
   NG_VALIDATORS,
@@ -39,6 +40,7 @@ export class SelectFormComponent extends ElementBase<string>
   @ViewChild('inputTextForm') inputText: ElementRef;
   @ViewChild('select') select: ElementRef;
   @Input() data: SelectInterface[];
+  @Input() name: string;
   public labelText: string;
   @Input() set label(value: string) {
     this.labelText = value;
@@ -50,6 +52,8 @@ export class SelectFormComponent extends ElementBase<string>
   public showList: boolean;
   public dinamicId = (Math.random() * 1000).toFixed(3).toString();
   public temporalValue: any;
+  private _statusValidation: string;
+
 
   constructor(
     @Optional() @Inject(NG_VALIDATORS) validators: Array<any>,
@@ -62,6 +66,7 @@ export class SelectFormComponent extends ElementBase<string>
     this.showList = false;
     this.labelText = '';
     this.reverseList = false;
+    this.name = '';
   }
 
   ngOnDestroy(): void {
@@ -86,6 +91,16 @@ export class SelectFormComponent extends ElementBase<string>
       this.validateData();
       this._cdr.detectChanges();
     }
+    this.model.statusChanges
+      .pipe(filter(status => this._statusValidation !== status))
+      .subscribe(status => {
+        this._statusValidation = status;
+        const states: StateInFormInterface = {
+          status,
+          model: this.model,
+        };
+        this._validationService.set(states);
+      });
   }
 
   selectItem(valueSelected: SelectInterface): void {

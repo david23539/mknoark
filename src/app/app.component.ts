@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonFloatService } from './button/float-button/button-float.service';
 import { SpinnerLoaderService } from './spinner/spinner-loader/spinner-loader.service';
 import { SelectOptionInterface } from './msg-chat/select-option.interface';
-import { ChangeColorService } from './change-color/change-color.service';
 
 @Component({
   selector: 'nk-root',
@@ -13,22 +12,22 @@ export class AppComponent implements OnInit {
   public color: string;
   cont: number;
   data: any;
+  dataSelect: any[];
+  showSecond = false;
+  modelH = 'H';
   constructor(
     private _spinnerLoader: SpinnerLoaderService,
     private buttonServiuce: ButtonFloatService,
-    private _colorService: ChangeColorService
   ) {
     this.cont = 0;
     this.data = {};
   }
 
   ngOnInit(): void {
-    this._colorService.setColorTheme([
-      {
-        keyVariable: '--primary-color',
-        valueVariable: 'red',
-      },
-    ]);
+    this.dataSelect = [{
+      text: 'Hola',
+      value: 'H'
+    }];
   }
 
   show() {
@@ -39,5 +38,10 @@ export class AppComponent implements OnInit {
 
   selectOption($event: SelectOptionInterface) {
     console.log($event);
+  }
+
+  test($event: any) {
+    console.log($event);
+    alert(JSON.stringify($event));
   }
 }
