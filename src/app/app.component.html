@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="container__row">
+<!--<div class="container">-->
+  <!--<div class="container__row">
     <div class="container__col-12">
       <nk-card-default>
         <h1 header>
@@ -17,19 +17,19 @@
 
               <div class="container__col-6">
                 <nk-input-switch-form  [(ngModel)]="dataShitch" required  [name]="'campo4'"></nk-input-switch-form>
-                <!--<nk-checkbox-form
+                &lt;!&ndash;<nk-checkbox-form
                   [label]="'nk-checkbox-form'"
                   [(ngModel)]="dataShitch"
                   name="checkbox"
                   validateTrue
                 >
 
-                </nk-checkbox-form>-->
+                </nk-checkbox-form>&ndash;&gt;
               </div>
 
               <div class="container__col-6" *ngIf="showSecond">
                 <nk-select-form [(ngModel)]="modelH" [data]="dataSelect" [label]="'campo 3'"  [name]="'campo3'"></nk-select-form>
-<!--                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>-->
+&lt;!&ndash;                <nk-input-form required [(ngModel)]="data.campo1" [label]="'campo 1'"  [name]="'campo1'"></nk-input-form>&ndash;&gt;
               </div>
             </div>
           </nk-form-default>
@@ -38,5 +38,11 @@
     </div>
     <button (click)="showSecond = !showSecond">ADD/REMOVE</button>
   </div>
-</div>
+</div>-->
+PAntalla 1
+appComponent 1 -> true
+<nk-root (dataOut)="test($event)" ></nk-root>
+
+appComponent2 -> null
+<nk-root2 [data]="data" ></nk-root2>
 

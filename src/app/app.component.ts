@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { ButtonFloatService } from './button/float-button/button-float.service';
 import { SpinnerLoaderService } from './spinner/spinner-loader/spinner-loader.service';
 import { SelectOptionInterface } from './msg-chat/select-option.interface';
@@ -9,40 +9,33 @@ import { SelectOptionInterface } from './msg-chat/select-option.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public color: string;
-  cont: number;
-  data: any;
-  dataSelect: any[];
-  showSecond = false;
-  modelH = 'H';
-  dataShitch = null;
+
+  @Output() dataOut: EventEmitter<boolean>;
+  public showBlock = false;
   constructor(
-    private _spinnerLoader: SpinnerLoaderService,
-    private buttonServiuce: ButtonFloatService,
   ) {
-    this.cont = 0;
-    this.data = {};
+
   }
 
   ngOnInit(): void {
-    this.dataSelect = [{
-      text: 'Hola',
-      value: 'H'
-    }];
+    this.showBlock = true;
   }
 
-  show() {
-    this.buttonServiuce
-      .showButtonFloat('icon-nk-plus', this.color)
-      .subscribe(() => {});
+
+}
+
+export class AppComponent2 implements OnInit {
+  @Input() data: boolean;
+  public showBlock2 = false;
+
+  constructor(
+  ) {
+
   }
 
-  selectOption($event: SelectOptionInterface) {
-    console.log($event);
+  ngOnInit(): void {
+
   }
 
-  test($event: any) {
-    console.log($event);
-    alert(JSON.stringify($event));
-  }
+
 }
