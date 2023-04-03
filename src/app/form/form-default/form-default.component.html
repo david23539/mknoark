@@ -1,5 +1,5 @@
 <form #form="ngForm"
-      (ngSubmit)="sendData(form.value)"
+
       autocomplete="off"
       novalidate
 >
@@ -7,6 +7,7 @@
   <div class="container__col-12">
     <nk-button-default
       [isLoading]="isLoading"
+      (click)="sendData(form.value)"
       [typeButton]="form.valid  ? 'success': 'disabled'"
     >
       {{textButton ? textButton : 'Enviar'}}
