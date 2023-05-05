@@ -1,6 +1,6 @@
 {
   "name": "mk-noark",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "repository": {
     "url": "https://github.com/david23539/mknoark.git",
     "type": "git"
@@ -26,8 +26,8 @@
     "doc": "npx compodoc -p tsconfig.json --language es-ES --disableCoverage"
   },
   "funding": {
-    "type" : "patreon",
-    "url" : "https://www.patreon.com/david23539"
+    "type": "patreon",
+    "url": "https://www.patreon.com/david23539"
   },
   "bugs": {
     "email": "david23539@gmail.com",
@@ -77,6 +77,6 @@
     "prettier": "1.19.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "typescript": "^4.3.5"
+    "typescript": "4.4.2"
   }
 }
