@@ -4,7 +4,7 @@
        [ngStyle]="{'min-height': height ? height + 'vh': '80vh'}"
   >
 
-    <div class="style-header">
+    <div class="style-header" [ngClass]="{'ios': isIos}">
       <ng-content select="[header]"></ng-content>
     </div>
 

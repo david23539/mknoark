@@ -41,6 +41,8 @@ export class ValidateDocumentDirective {
           return this._validateNie(control);
         case globalConstant.TYPES_DOCUMENTS.CIF:
           return this._validateCif(control);
+        case globalConstant.TYPES_DOCUMENTS.PASSPORT:
+          return null;
         default:
           this._mesagge.message = Literal[this._lang].NO_SELECTED_TYPE_DOCUMENT;
           return this._mesagge;
